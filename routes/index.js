@@ -3,7 +3,7 @@ var router = express.Router();
 var knex = require('../db/knex');
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Arian' });
+  res.render('index.html');
 });
 
 module.exports = router;
