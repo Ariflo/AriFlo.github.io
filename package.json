@@ -16,7 +16,8 @@
     "locus": "^1.2.0",
     "morgan": "~1.6.1",
     "pg": "^4.4.4",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "typed.js": "^1.1.1"
   },
   "devDependencies": {
     "browser-sync": "2.9.6",

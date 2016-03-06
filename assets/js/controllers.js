@@ -1,18 +1,22 @@
 ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '$routeParams',
 	                                     function($scope,  $http,  $parse,  $location,   $routeParams) {
 
-$scope.client = {};
+	$scope.client = {};
 
-$scope.info = function(){
-	$http({
-		method: "POST",
-		url: "/api/clients",
-		data: $scope.client
-	}).then(function(data){
+	$scope.info = function(){
+		$http({
+			method: "POST",
+			url: "/api/clients",
+			data: $scope.client
+		}).then(function(data){
+			
+		}).catch(function(err){
+			console.log(err);
+		});
+	}
+
+	$scope.texttyping = ["Hello, this is the first sentence", 
+	                        "Second sentence",
+	                        "Final sentence" ]
 		
-	}).catch(function(err){
-		console.log(err);
-	});
-}
-	
 }]);
