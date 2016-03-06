@@ -1,0 +1,25 @@
+<h1>HOMEPAGE</h1>
+
+<h1>Reach out to Ari</h1>
+
+<form id="infoForm" ng-submit="info()">
+            <label>First Name</label>
+            <input id="firstName" class="form-control" type="text" ng-model="client.firstName" name="firstName" placeholder="First Name" required>            
+
+            <label>Last Name</label>
+            <input id="lastName" class="form-control" type="text" ng-model="client.lastName" name="lastName" placeholder="Last Name" required>            
+
+            <label>Company</label>
+            <input id="company" class="form-control" type="text" ng-model="client.company" name="company" placeholder="Company inc">            
+
+            <label>E-mail Address</label>
+            <input id="email" class="form-control" type="email" ng-model="client.email" name="email" placeholder="name@company.com" required>            
+
+            <label>Phone</label>
+            <input id="phone" class="form-control" type="phone" ng-model="client.phone" name="phone" placeholder="212-223-5534" required>           
+
+            <label>Message</label>
+            <textarea id="message" class="form-control" type="text" ng-model="client.message" name="message"></textarea>
+
+            <input  id="infoFormSubmit" class="btn btn-primary" type="submit" value="Submit">
+</form> 
