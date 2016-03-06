@@ -9,17 +9,16 @@ var bodyParser = require('body-parser');
 require('dotenv').load();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'public/views'));
 
-app.use(favicon(path.join(__dirname, 'public', '/images/AriFloFavicon.ico')));
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(favicon(path.join(__dirname, 'public', '/images/AriFloFavicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', function(req,res){
-    res.sendFile(path.join(__dirname, '/views/partials', 'index.html'));
+    res.sendFile(path.join(__dirname, '/public/views', 'index.html'));
 });
 
 //set a port to listen to
