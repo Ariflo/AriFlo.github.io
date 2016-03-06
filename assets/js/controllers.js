@@ -8,7 +8,11 @@ $scope.info = function(){
 		method: "POST",
 		url: "/api/clients",
 		data: $scope.client
-	})
+	}).then(function(data){
+		
+	}).catch(function(err){
+		console.log(err);
+	});
 }
 	
 }]);
