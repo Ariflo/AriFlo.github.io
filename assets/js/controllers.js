@@ -15,8 +15,8 @@ ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '
 		});
 	}
 
-	$scope.texttyping = ["Hello, this is the first sentence", 
-	                        "Second sentence",
-	                        "Final sentence" ]
+	$scope.texttyping = ["stargazer.", 
+	                        "curious coder.",
+	                        "Software Engineer." ]
 		
 }]);
