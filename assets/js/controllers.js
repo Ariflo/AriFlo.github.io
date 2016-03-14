@@ -3,6 +3,7 @@ ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '
 
 	$scope.client = {};
 
+	//add client info to database
 	$scope.info = function(){
 		$http({
 			method: "POST",
@@ -15,18 +16,19 @@ ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '
 		});
 	}
 
+	//render heading text 
 	$scope.texttyping = ["stargazer.", 
 	                        "curious coder.",
 	                        "Software Engineer." ]
 
+	//rener bio button 
 	$timeout(function(){
 		$scope.show = true; 
 	}, 5000); 
 
-	$scope.gotoContent = function() {
-
-	  // call $anchorScroll()
-	  $anchorScroll('content');
+	$scope.goToBio = function() {
+	  // call $anchorScroll() on Bio
+	  $anchorScroll('bio');
 	};
 		
 }]);
