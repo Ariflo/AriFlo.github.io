@@ -75,7 +75,7 @@ a {
 /* entire container, keeps perspective */
 .flip-container {
   perspective: 2000;
-  margin-left: 40%
+  margin-left: 40%;
 }
   /* flip the pane when hovered */
   .flip-container:hover .flipper, .flip-container.hover .flipper {
@@ -116,7 +116,7 @@ a {
   transform: rotateY(180deg);
 }
 
-.icon{
+.topIcon{
   float: left;
   display: inline;
   height: 5%;
@@ -125,13 +125,30 @@ a {
   margin-left: 2%;
 }
 
-.topBadgeRow{
-  display: block;
+.bottomIcon{
+  float: left;
+  display: inline;
+  height: 5%;
+  width: 5%;
+  margin-right: 5%;
+  margin-left: 5%;
 }
 
-.bottomBadgeRow{
-  display: block;
+.picRow{
+  height: 18em;
 }
+
+.topBadges{
+    margin-left: 40%; 
+}
+
+.bottomBadges{
+    margin-left: 35%; 
+}
+
+
+
+
 
 
 
