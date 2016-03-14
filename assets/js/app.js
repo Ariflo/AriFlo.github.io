@@ -1,4 +1,4 @@
-var ariApp = angular.module('ariApp', ['ngRoute', 'ngAnimate', 'ngResource']);
+var ariApp = angular.module('ariApp', ['ngRoute', 'ngAnimate', 'ngResource', 'ngSanitize']);
 
 ariApp.config(function($routeProvider, $locationProvider,$httpProvider){
 	$routeProvider
