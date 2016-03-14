@@ -18,11 +18,6 @@ a {
   color: #00B7FF;
 }
 
-img{
-	margin-right:80%;
-	margin-left:15%;
-}
-
 .typed-cursor{
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
@@ -80,7 +75,7 @@ img{
 /* entire container, keeps perspective */
 .flip-container {
   perspective: 2000;
-  margin-left: 35%
+  margin-left: 40%
 }
   /* flip the pane when hovered */
   .flip-container:hover .flipper, .flip-container.hover .flipper {
@@ -121,7 +116,22 @@ img{
   transform: rotateY(180deg);
 }
 
+.icon{
+  float: left;
+  display: inline;
+  height: 5%;
+  width: 5%;
+  margin-right: 2%;
+  margin-left: 2%;
+}
 
+.topBadgeRow{
+  display: block;
+}
+
+.bottomBadgeRow{
+  display: block;
+}
 
 
 
