@@ -33,7 +33,7 @@ img{
 }
 
 #learnMoreButton {
-  transition: 10s linear all;  
+  transition: 5s linear all;  
   opacity: 1;
 
   font-size: 1.5em;
@@ -62,6 +62,9 @@ img{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(224, 224, 209, .2)', endColorstr='rgba(235, 235, 224, .8)',GradientType=0 ); /* IE6-9 */
 }
 
+#content{
+   margin-top: 2000px;
+}
 
 
 

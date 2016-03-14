@@ -1,5 +1,5 @@
-ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '$routeParams', '$timeout',
-	                                     function($scope,  $http,  $parse,  $location,   $routeParams, $timeout ) {
+ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '$routeParams', '$timeout', '$anchorScroll',
+	                                     function($scope,  $http,  $parse,  $location,   $routeParams, $timeout, $anchorScroll ) {
 
 	$scope.client = {};
 
@@ -22,5 +22,11 @@ ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '
 	$timeout(function(){
 		$scope.show = true; 
 	}, 5000); 
+
+	$scope.gotoContent = function() {
+
+	  // call $anchorScroll()
+	  $anchorScroll('content');
+	};
 		
 }]);
