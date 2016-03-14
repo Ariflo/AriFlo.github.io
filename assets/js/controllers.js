@@ -1,5 +1,5 @@
-ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '$routeParams',
-	                                     function($scope,  $http,  $parse,  $location,   $routeParams) {
+ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '$routeParams', '$timeout',
+	                                     function($scope,  $http,  $parse,  $location,   $routeParams, $timeout ) {
 
 	$scope.client = {};
 
@@ -18,5 +18,9 @@ ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '
 	$scope.texttyping = ["stargazer.", 
 	                        "curious coder.",
 	                        "Software Engineer." ]
+
+	$timeout(function(){
+		$scope.show = true; 
+	}, 5000); 
 		
 }]);
