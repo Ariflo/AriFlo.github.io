@@ -68,11 +68,10 @@ img{
 }
 
 .bioPic{
+  float: left;
   height: 25%;
   width:25%;
   border-radius: 5px;
-  
-
 }
 
 
