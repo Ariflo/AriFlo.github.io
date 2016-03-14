@@ -75,7 +75,7 @@ a {
 /* entire container, keeps perspective */
 .flip-container {
   perspective: 2000;
-  margin-left: 40%;
+  margin-left: 41%;
 }
   /* flip the pane when hovered */
   .flip-container:hover .flipper, .flip-container.hover .flipper {
@@ -116,16 +116,16 @@ a {
   transform: rotateY(180deg);
 }
 
-.topIcon{
+.topIcons{
   float: left;
   display: inline;
   height: 5%;
   width: 5%;
-  margin-right: 2%;
-  margin-left: 2%;
+  margin-right: 3%;
+  margin-left: 3%;
 }
 
-.bottomIcon{
+.bottomIcons{
   float: left;
   display: inline;
   height: 5%;
@@ -134,16 +134,26 @@ a {
   margin-left: 5%;
 }
 
+.fbIcon{
+  float: left;
+  display: inline;
+  height: 6%;
+  width: 6%;
+  margin-right: 5%;
+  margin-left: 5%; 
+}
+
 .picRow{
-  height: 18em;
+  height: 16em;
 }
 
 .topBadges{
-    margin-left: 40%; 
+    margin-left: 41%; 
+    padding-bottom: 3em;
 }
 
 .bottomBadges{
-    margin-left: 35%; 
+    margin-left: 36%; 
 }
 
 
