@@ -64,14 +64,61 @@ img{
     background-color: #B2F7E6;
 }
 
-#bio{
+.bioPic{
+  height: 50%;
+  width:50%;
+  border-radius: 50%;
+ 
 }
 
-.bioPic{
-  float: left;
-  height: 25%;
-  width:25%;
-  border-radius: 5px;
+.logo{
+  height: 50%;
+  width:50%;
+  border-radius: 50%;
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 2000;
+  margin-left: 35%
+}
+  /* flip the pane when hovered */
+  .flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+.flip-container, .front, .back {
+  width: 30em;
+  height: 30em;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
 }
 
 
