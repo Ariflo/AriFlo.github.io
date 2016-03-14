@@ -61,10 +61,18 @@ img{
 }
 
 .homepageBkRd{
-    background-color: #9C829E;
+    background-color: #B2F7E6;
 }
 
 #bio{
+}
+
+.bioPic{
+  height: 25%;
+  width:25%;
+  border-radius: 5px;
+  
+
 }
 
 
