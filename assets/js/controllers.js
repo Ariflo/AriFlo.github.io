@@ -1,7 +1,11 @@
 ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '$routeParams', '$timeout', '$anchorScroll', 'anchorSmoothScroll',
 	                                     function($scope,  $http,  $parse,  $location,   $routeParams, $timeout, $anchorScroll, anchorSmoothScroll) {
 
+	//empty object to show client
 	$scope.client = {};
+
+	//initially hide Arian's about me description 
+	$scope.show = true; 
 
 	//add client info to database
 	$scope.info = function(){
@@ -26,11 +30,12 @@ ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '
 		$scope.show = true; 
 	}, 5000); 
 
+	//scroll to bio section when clicked
 	$scope.goToBio = function(eID) {
-	  // call $anchorScroll() on Bio
 	  anchorSmoothScroll.scrollTo(eID)
 	};
 
+	//Array of diffrent quotes to render with every page load
 	$scope.quotes = ['"The roots of education are bitter, but the fruit is sweet" -Aristotle',
 			     '"A programmer who subconsciously views himself as an artist will enjoy what he does and will do it better." -Donald Knuth',
 			     '"Men are like steel. When they lose their temper, they lose their worth." -Chuck Norris',
@@ -48,6 +53,12 @@ ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '
 			     '"Life&#39s most persistent and urgent question is, What are you doing for others?" -Dr. Martin Luther King, Jr.',
 			     '"The most sophisticated people I know - inside they are all children." -Jim Henson']
 
+	//Select random quote from quotes array to render on the page
 	$scope.randomQuote = $scope.quotes[Math.floor(Math.random() * $scope.quotes.length)];
+
+	//display Arian Flores' about me paragraph
+	$scope.showBio = function(){
+		$scope.show = !$scope.show; 
+	}
 		
 }]);

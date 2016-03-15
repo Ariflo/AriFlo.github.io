@@ -8,18 +8,21 @@
             <div id="bio">
             <div class="picRow">
                         <div class="row"> 
-                                <div class="flip-container" ontouchstart="this.classList.toggle('hover')">
-                                    <div class="flipper">
-                                        <div class="front">
-                                            <!-- front content -->
-                                            <img class="bioPic" src="images/AriPic.jpg"  alt="headshot">
-                                        </div>
-                                        <div class="back">
-                                            <!-- back content -->
-                                            <img class="logo" src="images/logo.jpg"  alt="logo">
+                                    <div class="flip-container" ontouchstart="this.classList.toggle('hover')">
+                                        <div class="flipper">
+                                            <div class="front">
+                                                <!-- front content -->
+                                                <img class="bioPic" src="images/AriPic.jpg"  alt="headshot">
+                                            </div>
+                                            <div class="back">
+                                                <!-- back content -->
+                                                <img class="animate-show" ng-click="showBio()"  src="images/logo.jpg"  alt="logo">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                    <p class="animate-show" ng-hide="show">
+                                        A former financial analyst who was more fascinated with the logical and the analytical aspects of the financial world than the culture surrounding it; I've recently changed tracks and have become a web developing software engineer.I am a divergent problem solver, effective communicator, and collaborative team player interested in building robust and innovative data-driven web sites and applications. 
+                                    </p>
                         </div>  
                 </div>
                 <div class="row">
