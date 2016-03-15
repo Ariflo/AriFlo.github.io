@@ -5,7 +5,7 @@ ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '
 	$scope.client = {};
 
 	//initially hide Arian's about me description 
-	$scope.show = true; 
+	$scope.display = true; 
 
 	//add client info to database
 	$scope.info = function(){
@@ -58,7 +58,7 @@ ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '
 
 	//display Arian Flores' about me paragraph
 	$scope.showBio = function(){
-		$scope.show = !$scope.show; 
+		$scope.display = !$scope.display; 
 	}
 		
 }]);
