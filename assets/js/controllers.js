@@ -21,11 +21,11 @@ ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '
 	}
 
 	//render heading text 
-	$scope.texttyping = ["stargazer.", 
-	                        "curious coder.",
-	                        "Software Engineer." ]
+	$scope.texttyping = ["stargazer;", 
+	                        "Curious Coder;",
+	                        "Software Engineer;" ]
 
-	//rener bio button 
+	//render bio button 
 	$timeout(function(){
 		$scope.show = true; 
 	}, 5000); 
