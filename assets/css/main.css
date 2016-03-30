@@ -34,7 +34,7 @@ h1{
   font: bold 20px "gruppo";
   padding-bottom: 10px;
   width: 75%;
-  margin-left: 15%;
+  margin-left: 12%;
 }
 
 a {
@@ -100,9 +100,6 @@ a {
   border-radius: 50%;
 }
 
-.logo{
-
-}
 
 /* entire container, keeps perspective */
 .flip-container {
@@ -185,6 +182,12 @@ a {
   height: 16em;
 }
 
+#webbAppHeader{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  color: light grey;
+  background-color: rgba(0,0,0,.4);
+}
 .topBadges{
     margin-top: 1%;
     margin-left: 40%; 
@@ -241,7 +244,7 @@ a {
 }
 
 #portfolio{
-  margin-top: 10%; 
+  margin-top: 2%; 
 }
 
 .portfolioHeader{

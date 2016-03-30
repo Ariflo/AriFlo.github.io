@@ -8,29 +8,61 @@
             </div>
 
             <div id="bio">
-            <div class="picRow">
-                        <div class="row"> 
-                                    <div class="flip-container" ontouchstart="this.classList.toggle('hover')">
-                                        <div class="flipper">
-                                            <div class="front">
-                                                <!-- front content -->
-                                                <img class="bioPic" src="images/AriPic.jpg"  alt="headshot">
-                                            </div>
-                                            <div class="back">
-                                                <!-- back content -->
-                                                <img class="animate-show" ng-click="showBio()"  src="images/logo.jpg"  alt="logo">
+                <div class="picRow">
+                            <div class="row"> 
+                                        <div class="flip-container" ontouchstart="this.classList.toggle('hover')">
+                                            <div class="flipper">
+                                                <div class="front">
+                                                    <!-- front content -->
+                                                    <img class="bioPic" src="images/AriPic.jpg"  alt="headshot">
+                                                </div>
+                                                <div class="back">
+                                                    <!-- back content -->
+                                                    <img class="animate-show" ng-click="showBio()"  src="images/logo.jpg"  alt="logo">
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-<!--                                     <p class="animate-show" ng-hide="display">
-                                        A former financial analyst who was more fascinated with the logical and the analytical aspects of the financial world than the culture surrounding it; I've recently changed tracks and have become a web developing software engineer.I am a divergent problem solver, effective communicator, and collaborative team player interested in building robust and innovative data-driven web sites and applications. 
-                                    </p> -->
-                        </div>  
+    <!--                                     <p class="animate-show" ng-hide="display">
+                                            A former financial analyst who was more fascinated with the logical and the analytical aspects of the financial world than the culture surrounding it; I've recently changed tracks and have become a web developing software engineer.I am a divergent problem solver, effective communicator, and collaborative team player interested in building robust and innovative data-driven web sites and applications. 
+                                        </p> -->
+                            </div>  
+                    </div>
+                    <div class="row">
+                        <p id="quote" class="text-center" ng-bind-html="randomQuote">{{randomQuote}}</p> 
+                    </div>     
                 </div>
+            
+            <h2 id="webbAppHeader" class="text-center">Web App Portfolio</h2>
+            <div id="portfolio">
                 <div class="row">
-                    <p id="quote" class="text-center" ng-bind-html="randomQuote">{{randomQuote}}</p> 
-                </div> 
-                <div class="contact">    
+                        <div class="project">
+                            <h4 class="portfolioHeader text-center">Capstone - ironbars.org</h4>
+                            <a ng-href="http://www.ironbars.org">
+                                        <img class="projectPic" src="images/ironbars.jpg" alt="ironbars.org">
+                            </a>
+
+                            <p class="portfolioDescription">Ironbars.org uses data avaliable from the 2010 US Census and the national prisoners statistics program to provide users their probability of being incaracated in their state based on their demographics (male, female, white, black, or other).</p>
+
+                            <p class="techBox"><b>Tech Used:</b>  Postgres, Express, Angular, Node.js, Jquery, Bootstrap, Javascript, HTML5, CSS, D3.js, and ReGex for search and validation</p>
+
+                        </div>
+                        <div class="project">
+                            <h4 class="portfolioHeader text-center">Angular Group Project - CodeQuest</h4>
+                            
+                            <a ng-href="http://codequest.io">
+                                        <img class="projectPic" src="images/codequest.jpg" alt="codequest.io">
+                            </a>
+                            <p><b>Team Members:</b> Jonathan Harlem, Halah Al-Shaikhly, Ashley Nguyn, and Jess Yang</p>
+                            <p class="portfolioDescription">Codequest is a searchable SPA database containing interview questions from tech companies and startups in the industry. Users can search for relevant interview questions pertaining to their position(s) of interest and can choose to contribute to this open source project by adding new interview questions. </p>
+
+                            <p class="portfolioDescription"><b>My responsibilities:</b> Scraping company data using Nightmare.js and setting up D3.js bar graph on landing page. </p>
+
+                            <p class="techBox"><b>Tech Used:</b> Postgres, Express, Angular, Node.js, Jquery, Bootstrap, Javascript, HTML5, CSS, D3.js, Nightmare.js (scraping), and Select 2 for search</p>
+                        </div>
+                </div>
+            </div>
+
+            <div class="contact">    
                 <h2 id="reachOut" class="text-center">Reach Out</h2>             
                 <div class="row">
                     <div class="topBadges">
@@ -58,37 +90,7 @@
                         </a>
                     </div> 
                 </div>   
-                </div>         
-            </div>
-
-            <div id="portfolio">
-                <div class="row">
-                        <div class="project">
-                            <h4 class="portfolioHeader">Capstone - ironbars.org</h4>
-                            <a ng-href="http://www.ironbars.org">
-                                        <img class="projectPic" src="images/ironbars.jpg" alt="ironbars.org">
-                            </a>
-
-                            <p class="portfolioDescription">Ironbars.org uses data avaliable from the 2010 US Census and the national prisoners statistics program to provide users their probability of being incaracated in their state based on their demographics (male, female, white, black, or other).</p>
-
-                            <p class="techBox"><b>Tech Used:</b>  Postgres, Express, Angular, Node.js, Jquery, Bootstrap, Javascript, HTML5, CSS, D3.js, and ReGex for search and validation</p>
-
-                        </div>
-                        <div class="project">
-                            <h4 class="portfolioHeader">Angular Group Project - CodeQuest</h4>
-                            
-                            <a ng-href="http://codequest.io">
-                                        <img class="projectPic" src="images/codequest.jpg" alt="codequest.io">
-                            </a>
-                            <p><b>Team Members:</b> Jonathan Harlem, Halah Al-Shaikhly, Ashley Nguyn, and Jess Yang</p>
-                            <p class="portfolioDescription">Codequest is a searchable SPA database containing interview questions from tech companies and startups in the industry. Users can search for relevant interview questions pertaining to their position(s) of interest and can choose to contribute to this open source project by adding new interview questions. </p>
-
-                            <p class="portfolioDescription"><b>My responsibilities:</b> Scraping company data using Nightmare.js and setting up D3.js bar graph on landing page. </p>
-
-                            <p class="techBox"><b>Tech Used:</b> Postgres, Express, Angular, Node.js, Jquery, Bootstrap, Javascript, HTML5, CSS, D3.js, Nightmare.js (scraping), and Select 2 for search</p>
-                        </div>
-                </div>
-            </div>
+            </div>     
       
 
 <!-- 
