@@ -21,7 +21,7 @@ ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '
 	}
 
 	//render heading text 
-	$scope.texttyping = ["stargazer;", 
+	$scope.texttyping = ["Stargazer;", 
 	                        "Curious Coder;",
 	                        "Software Engineer;" ]
 
