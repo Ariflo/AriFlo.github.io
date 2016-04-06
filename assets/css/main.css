@@ -10,6 +10,10 @@ h2{
   font: 2em "Monaco";
 }
 
+#maintence{
+    padding-top: 15%;
+}
+
 #var{
   margin-right: 5px;
   color: #7AF5C3;
