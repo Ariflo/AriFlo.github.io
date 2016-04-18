@@ -264,7 +264,7 @@ a {
 }
 
 #portfolio{
-  margin-top: 2%; 
+  margin-top: 2%;
 }
 
 .portfolioHeader{
@@ -272,10 +272,38 @@ a {
   font-weight: 600;
 }
 
+.demoHeader{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  color: #3C5278;
+  border: solid #000000;
+  border-radius: 5px;
+  width: 50%;
+  margin-left: 25%; 
+}
+
 .portfolioDescription{
   font-family: 'Source Serif Pro', serif;
   font-weight: 400;
   width: 100%;
+  text-align: center;
+  padding: 1em;
+}
+
+.reponsibilitiesHeader{
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 400;
+  width: 100%;
+  text-align: center;
+  padding-left: 1em;
+}
+
+.responsebilties{
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 400;
+  width: 100%;
+  text-align: center;
+  display: block;
 }
 
 .techBox{
@@ -283,13 +311,32 @@ a {
   font-size: 12px;
   font-weight: 400;
   width: 100%;
+  padding: 1em;
+}
+
+.details{
+  display: block;
 }
 
 .project{
   float: left;
   display: inline;
-  width: 40%;
+  width: 45%;
   height: 50%;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
+  border: solid #000000 2px;
+  border-radius: 5px;
+  margin-top: 1em;
+}
+
+.projectAngular{
+  float: left;
+  display: inline;
+  width: 45%;
+  height: 50%;
+  margin-left: 26%;
+  border: solid #000000 2px;
+  border-radius: 5px;
+  margin-top: 1em;
 }
