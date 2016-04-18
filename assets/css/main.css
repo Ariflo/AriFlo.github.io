@@ -163,35 +163,12 @@ a {
    -webkit-transform: rotateY(180deg);
 }
 
-.topIcons{
+.icons{
   float: left;
-  display: inline;
-  height: 5%;
-  width: 5%;
+  height: 4%;
+  width: 4%;
   margin-right: 3%;
   margin-left: 3%;
-  z-index: 1000; 
-  position:relative;
-}
-
-.bottomIcons{
-  float: left;
-  display: inline;
-  height: 5%;
-  width: 5%;
-  margin-right: 5%;
-  margin-left: 5%;
-  z-index: 1000; 
-  position:relative;
-}
-
-.fbIcon{
-  float: left;
-  display: inline;
-  height: 6%;
-  width: 6%;
-  margin-right: 5%;
-  margin-left: 5%; 
   z-index: 1000; 
   position:relative;
 }
@@ -207,21 +184,21 @@ a {
   background-color: rgb(0,0,0);
 }
 
-.topBadges{
-    margin-top: 1%;
-    margin-left: 40%; 
-    padding-bottom: 3em;
+.contactIcons{
+  margin-left: 27%;
+  height: 1%;
 }
 
-.bottomBadges{
-    margin-left: 35%; 
+.pipe{
+  color: white;
+  font-size: 20px;
 }
 
 .contact{
   height: 100%;
   width: 100%;
   background-color: rgb(0,0,0);
-   padding-bottom: 1em;
+  padding-bottom: 1em;
 }
 
 #reachOut{
