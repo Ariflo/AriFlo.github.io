@@ -1,8 +1,6 @@
-        
-        
             <div class="jumbotron">
                 <div class="pageHeader">
-                         <h2 class="text-center"><span id="var">var</span>arianFlores <span id="equals">=</span><typedjs strings="texttyping"></typedjs></h2>
+                         <h2 class="text-center"><span id="var">var</span>arianFlores<span id="equals">=</span><typedjs strings="texttyping"></typedjs></h2>
                          <button type="button" ng-show="show" ng-click="goToBio('bio')" id="learnMoreButton" class="btn btn-lg gradient">Learn More</button>
                 </div>
             </div>
@@ -34,9 +32,9 @@
             
             <h2 id="webbAppHeader" class="text-center">Web App Portfolio</h2>
             <div id="portfolio">
-                <div class="row">
+                <div class="row"> 
                         <div class="project">
-                            <h4 class="portfolioHeader text-center">Front-end Project 1 - Mad Libs</h4>
+                            <h4 class="portfolioHeader text-center">Front-end Project - Mad Libs</h4>
                             <a ng-href="http://ariflo.github.io/MadLibs/">
                                         <img class="projectPic" src="images/madlibs.jpg" alt="madlibs">
                             </a>
@@ -46,11 +44,11 @@
                             <p class="techBox"><b>Tech Used:</b>HTML, CSS,  jQuery, JavaScript, Bootstrap</p>
 
                             <p class="techBox"><b>Build Time:</b>1 week</p>
+                        </div>         
 
-                        </div>                         
 
                         <div class="project">
-                            <h4 class="portfolioHeader text-center">Back-end Project 2 - Momentum Investments</h4>
+                            <h4 class="portfolioHeader text-center">Back-end Project - Momentum Investments</h4>
                             <a ng-href="http://momentuminvestments.herokuapp.com">
                                         <img class="projectPic" src="images/momentum.jpg" alt="momentumInvestments">
                             </a>
@@ -62,7 +60,6 @@
                             <p><b>Team Member:</b> Eric Hodges</p>
 
                             <p class="techBox"><b>Build Time:</b>1 week</p>
-
                         </div> 
 
                         <div class="project">
@@ -71,8 +68,9 @@
                             <a ng-href="https://redditangle.herokuapp.com">
                                         <img class="projectPic" src="images/reddit.jpg" alt="codequest.io">
                             </a>
-                            <p class="portfolioDescription">Reddit.com clone using angular, and OWASP standards for password storage and jwt (Json Web Tokens) </p>
 
+                            <p class="portfolioDescription">Reddit.com clone using angular and OWASP standards for password storage and jwt (Json Web Tokens)</p>
+                        
                             <p class="portfolioDescription"><b>My Responsibilities:</b> Setting up Front-End framework and relational database in PostgresSQL</p>
 
                             <p class="techBox"><b>Tech Used:</b> Postgres, Express, Angular, Node.js, Jquery, Bootstrap, Javascript, HTML5, CSS</p>
@@ -81,12 +79,13 @@
 
                             <p class="techBox"><b>Build Time:</b>1 week</p>
                         </div>
+                        
 
                         <div class="project">
                             <h4 class="portfolioHeader text-center">Full Stack Group Project - CodeQuest</h4>
                             
                             <a ng-href="http://codequest.io">
-                                        <img class="projectPic" src="images/codequest.jpg" alt="codequest.io">
+                                    <img class="projectPic" src="images/codequest.jpg" alt="codequest.io">
                             </a>
                             <p class="portfolioDescription">Codequest is a searchable SPA database containing interview questions from tech companies and startups in the industry. Users can search for relevant interview questions pertaining to their position(s) of interest and can choose to contribute to this open source project by adding new interview questions. </p>
 
@@ -95,25 +94,24 @@
                             <p class="techBox"><b>Tech Used:</b> Postgres, Express, Angular, Node.js, Jquery, Bootstrap, Javascript, HTML5, CSS, D3.js, Nightmare.js (scraping), and Select 2 for search</p>
 
                             <p><b>Team Members:</b> Jonathan Harlem, Halah Al-Shaikhly, Ashley Nguyn, and Jess Yang</p>
-
                             <p class="techBox"><b>Build Time:</b>1 week</p>
                         </div> 
                         
                         <div class="project">
                             <h4 class="portfolioHeader text-center">Full Stack Capstone - ironbars.org</h4>
+
                             <a ng-href="http://www.ironbars.org">
                                         <img class="projectPic" src="images/ironbars.jpg" alt="ironbars.org">
                             </a>
-
+                        
                             <p class="portfolioDescription">Ironbars.org uses data avaliable from the 2010 US Census and the national prisoners statistics program to provide users their probability of being incaracated in their state based on their demographics (male, female, white, black, or other).</p>
-
+                        
                             <p class="techBox"><b>Tech Used:</b>  Postgres, Express, Angular, Node.js, Jquery, Bootstrap, Javascript, HTML5, CSS, D3.js, and ReGex for search and validation</p>
-
+                        
                             <p class="techBox"><b>Build Time:</b>2 weeks </p>
-
-                        </div>
-                </div>
-            </div>
+                        </div>                                               
+                </div>  
+            </div>                        
 
             <div class="contact">    
                 <h2 id="reachOut" class="text-center"> Reach Out</h2>             
@@ -152,21 +150,15 @@
 <form id="infoForm" ng-submit="info()">
             <label>First Name</label>
             <input id="firstName" class="form-control" type="text" ng-model="client.firstName" name="firstName" placeholder="First Name" required>            
-
             <label>Last Name</label>
             <input id="lastName" class="form-control" type="text" ng-model="client.lastName" name="lastName" placeholder="Last Name" required>            
-
             <label>Company</label>
             <input id="company" class="form-control" type="text" ng-model="client.company" name="company" placeholder="Company inc">            
-
             <label>E-mail Address</label>
             <input id="email" class="form-control" type="email" ng-model="client.email" name="email" placeholder="name@company.com" required>            
-
             <label>Phone</label>
             <input id="phone" class="form-control" type="phone" ng-model="client.phone" name="phone" placeholder="212-223-5534" required>           
-
             <label>Message</label>
             <textarea id="message" class="form-control" type="text" ng-model="client.message" name="message"></textarea>
-
             <input  id="infoFormSubmit" class="btn btn-primary" type="submit" value="Submit">
 </form>  -->
