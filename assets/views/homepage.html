@@ -6,33 +6,27 @@
             </div>
 
             <div id="bio">
+                <img id="bioBackground" src="images/logo.jpg" alt="ariLogo">
                 <div class="picRow">
-                            <div class="row"> 
-                                        <div class="flip-container" ontouchstart="this.classList.toggle('hover')">
-                                            <div class="flipper">
-                                                <div class="front">
-                                                    <!-- front content -->
-                                                    <img class="bioPic" src="images/AriPic.jpg"  alt="headshot">
-                                                </div>
-                                                <div class="back">
-                                                    <!-- back content -->
-                                                    <img class="animate-show" ng-click="showBio()"  src="images/logo.jpg"  alt="logo">
-                                                </div>
-                                            </div>
-                                        </div>
-    <!--                                     <p class="animate-show" ng-hide="display">
-                                            A former financial analyst who was more fascinated with the logical and the analytical aspects of the financial world than the culture surrounding it; I've recently changed tracks and have become a web developing software engineer.I am a divergent problem solver, effective communicator, and collaborative team player interested in building robust and innovative data-driven web sites and applications. 
-                                        </p> -->
-                            </div>  
-                    </div>
+                    <div class="row"> 
+                         <img id="bioPic" src="images/AriPic.jpg"  alt="headshot">
+                    </div> 
+
                     <div class="row">
                         <p id="quote" class="text-center" ng-bind-html="randomQuote">{{randomQuote}}</p> 
-                    </div>     
+                    </div>                    
+
+                    <div class="row">
+                        <p class="bioText">
+                                Arian is a software developer fascinated with the logical and the analytical aspects of this crazy world we call home. A Vanderbilt University alum (Go 'Dores!) from New York City living in San Francisco; he spends 60% of his time building or thinking about his web applications, 25% sleeping, and the rest catching up with Game of Thrones. 
+                        </p>                                                    
+                    </div>    
+                    <button type="button" ng-click="goToBio('portfolio')" id="portfolioButton" class="btn btn-lg gradient">Portfolio</button> 
                 </div>
+            </div>
             
-            <h2 id="webbAppHeader" class="text-center">Web App Portfolio</h2>
             <div id="portfolio">
-                <div class="row"> 
+            <h2 id="webbAppHeader" class="text-center">Web App Portfolio</h2>
 
                         <div class="project">
                             <h4 class="portfolioHeader text-center">Front-end Project - Mad Libs</h4>
@@ -137,7 +131,6 @@
                             <span class="details"><b>Build Time:</b>2 week</span>
                             </p>
                         </div>                                        
-                </div>  
             </div>                        
 
             <div class="contact">    
