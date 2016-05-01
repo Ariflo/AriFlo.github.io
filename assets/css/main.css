@@ -161,9 +161,9 @@ a {
 .icons{
   float: left;
   height: 25%;
-  width: 6%;
-  margin-right: 3%;
-  margin-left: 3%;
+  width: 4%;
+  margin-right: 4%;
+  margin-left: 4%;
   z-index: 1000; 
   position:relative;
 }
