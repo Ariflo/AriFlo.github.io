@@ -7,27 +7,23 @@
 
             <div id="bio">
                 <img id="bioBackground" src="images/logo.jpg" alt="ariLogo">
-                <div class="picRow">
-                    <div class="row"> 
+
                          <img id="bioPic" src="images/AriPic.jpg"  alt="headshot">
-                    </div> 
 
-                    <div class="row">
                         <p id="quote" class="text-center" ng-bind-html="randomQuote">{{randomQuote}}</p> 
-                    </div>                    
 
-                    <div class="row">
                         <p class="bioText">
                                 Arian is a software developer fascinated with the logical and the analytical aspects of this crazy world we call home. A Vanderbilt University alum (Go 'Dores!) from New York City living in San Francisco; he spends 60% of his time building or thinking about his web applications, 25% sleeping, and the rest catching up with Game of Thrones. 
                         </p>                                                    
-                    </div>    
+ 
                     <button type="button" ng-click="goToBio('portfolio')" id="portfolioButton" class="btn btn-lg gradient">Portfolio</button> 
-                </div>
+
             </div>
             
             <div id="portfolio">
             <h2 id="webbAppHeader" class="text-center">Web App Portfolio</h2>
-
+            <div class="row">
+                
                         <div class="project">
                             <h4 class="portfolioHeader text-center">Front-end - Mad Libs</h4>
 
@@ -48,8 +44,8 @@
                             <span class="details"><b>Team Member(s):</b></span>
                             </p>
                         </div>     
-
-
+                
+                    
                         <div class="project">
                             <h4 class="portfolioHeader text-center">Back-end Project (Paired) - Momentum Investments</h4>
 
@@ -70,7 +66,10 @@
                             <span class="details"><b>Team Member(s):</b><a href="https://www.linkedin.com/in/ericbhodges"> Eric Hodges </a></span>
                             </p>
                         </div>                        
-
+            </div>
+            
+            <div class="row">
+                
                         <div class="project">
                             <h4 class="portfolioHeader text-center">Intro to CSS and Javascript - Pixel Art Maker</h4>
 
@@ -112,6 +111,10 @@
                             <span class="details"><b>Team Member(s):</b><a href="https://www.linkedin.com/in/simonsekhon"> Simon Sekhon </a></span>
                             </p>
                         </div> 
+            </div>
+
+            <div class="row">
+                
 
                         <div class="project">
                             <h4 class="portfolioHeader text-center">OAuth with Angular (Paired) - RedditAngle</h4>
@@ -154,11 +157,14 @@
                             <span class="details"><b>Team Member(s):</b><a href="https://www.linkedin.com/in/jonharlem"> Jonathan Harlem, </a></span><span><a href="https://www.linkedin.com/in/halahalshaikhly"> Halah Al-Shaikhly, </a></span><span><a href="https://www.linkedin.com/in/ashleyngu"> Ashley Nguyn, </a></span><span>and <a href="https://www.linkedin.com/in/jessyang650"> Jess Yang</a></span>
                             </p>
                         </div>                         
-
+            </div>
+            
+            <div class="row">
+                
                         <div class="project">
                             <h4 class="portfolioHeader text-center">Full Stack Capstone - ironbars.org</h4>
 
-                            <a ng-href="https://www.youtube.com/watch?v=YZhECozcMTU">
+                            <a class="text-center" ng-href="https://www.youtube.com/watch?v=YZhECozcMTU">
                                     <h4 class="demoHeader text-center">Video Demo</h4>
                             </a>
                             <a ng-href="http://www.ironbars.org">
@@ -195,85 +201,59 @@
                             <span class="details"><b>Expected release date:</b> June 1st, 2016</span>
                             <span class="details"><b>Team Member(s):</b></span>
                             </p>
-                        </div>                                
+                        </div>                                                
+            </div>   
 
-                        <div class="project">
-                            <h4 class="portfolioHeader text-center">Digital Aristotle</h4>
-
-                            <a ng-href="http://www.claverackhistoricalsociety.org/wp-content/uploads/2016/01/construction.png">
-                                    <h4 class="demoHeader text-center">Video Demo</h4>
-                            </a>
-                            <a ng-href="http://www.claverackhistoricalsociety.org/wp-content/uploads/2016/01/construction.png">
-                                        <img class="projectPic" src="images/construction.png" alt="coming soon">
-                            </a>
-
-                            <p class="portfolioDescription">Digital Aristotle will be a web application that will help interpret students questions on various physics questions and provide an answer.</p>
-
-                             <p class="reponsibilitiesHeader"><b>My Responsibilities</b><span class="responsebilties"> Build Front-End framework and project lead</span></p>
-                            
-                            <p class="techBox">
-                            <span class="details"><b>Tech Used:</b></span>
-                            <span class="details"><b>Expected release date:</b> June 1st, 2017</span>
-                           <span class="details"><b>Team Member(s): <a href="https://www.linkedin.com/in/john-hall-7785a243"></b> John Hall</a></span>
-                            </p>
-                        </div>                                
-
-                        <div class="project">
-                            <h4 class="portfolioHeader text-center">Bidderman.com</h4>
-
-                            <a ng-href="http://www.claverackhistoricalsociety.org/wp-content/uploads/2016/01/construction.png">
-                                    <h4 class="demoHeader text-center">Video Demo</h4>
-                            </a>
-                            <a ng-href="http://www.claverackhistoricalsociety.org/wp-content/uploads/2016/01/construction.png">
-                                        <img class="projectPic" src="images/construction.png" alt="coming soon">
-                            </a>
-
-                            <p class="portfolioDescription">bidderman.com will be a web application that will be able to act as your personal broker, making trades and automatically reallocating your assets.</p>
-
-                             <p class="reponsibilitiesHeader"><b>My Responsibilities</b><span class="responsebilties"> Build entire stack</span></p>
-                            
-                            <p class="techBox">
-                            <span class="details"><b>Tech Used:</b></span>
-                            <span class="details"><b>Expected release date:</b></span>
-                            <span class="details"><b>Team Member(s):</b></span>
-                            </p>
-                        </div>                       
-            </div>                        
+            </div>
 
             <div class="contact">    
-                <h2 id="reachOut" class="text-center"> Contact </h2>            
-                    <div class="contactIcons">
-                        
-                            <a class="iconLink" ng-href="https://github.com/ariflo">
-                                    <img class="icons" src="images/github.png" alt="github">
-                            </a>
+                <h2 id="reachOut" class="text-center"> Contact </h2>     
 
-                    
-                            <a class="iconLink" ng-href="https://www.linkedin.com/in/arianflores">
-                                    <img class="icons" src="images/Linkedin.png" alt="linkedin">
-                            </a>
+                <div class="contactInfo text-center">
 
-                        
-                            <a class="iconLink" ng-href="https://stackoverflow.com/users/6026693/arian-flores?tab=profile">
-                                    <img class="icons" src="images/stackoverflow.png" alt="stackoverflow">
-                            </a>
+                    <h4 class="text-center">Arian Flores</h4>
+                    <h5 class="text-center">Software Engineer</h5>
+                    <span class="glyphicon glyphicon-envelope"></span><p class="contactItem">ariflo@arianflores.com</p>
+                    <span class="glyphicon glyphicon-earphone"></span><p class="contactItem">917-565-2838</p>
+                    <span class="glyphicon glyphicon-map-marker"></span><p class="contactItem">San Francisco, CA</p>
 
-                
-                            <a  class="iconLink" ng-href="https://www.facebook.com/arian.flores.77">
-                                        <img class="icons" src="images/facebook.png" alt="facebook">
-                            </a>
+                    <div class="row">
+                            
+                            <div class="contactIcons">
 
-                
-                            <a class="iconLink" ng-href="https://medium.com/@AirManFlow">
-                                        <img class="icons" src="images/medium.png" alt="medium">
-                            </a>
+                                <a class="iconLink" ng-href="https://github.com/ariflo">
+                                        <img class="icons" src="images/github.png" alt="github">
+                                </a>
 
-                
-                            <a class="iconLink" ng-href="https://twitter.com/AirManFlow">
-                                        <img class="icons" src="images/twitter.png"alt="twitter"> 
-                            </a>
-                    
+                                
+                                <a class="iconLink" ng-href="https://www.linkedin.com/in/arianflores">
+                                        <img class="icons" src="images/Linkedin.png" alt="linkedin">
+                                </a>
+
+                                
+                                <a class="iconLink" ng-href="https://stackoverflow.com/users/6026693/arian-flores?tab=profile">
+                                        <img class="icons" src="images/stackoverflow.png" alt="stackoverflow">
+                                </a>
+
+                                
+                                <a  class="iconLink" ng-href="https://www.facebook.com/arian.flores.77">
+                                            <img class="icons" src="images/facebook.png" alt="facebook">
+                                </a>
+
+                                
+                                <a class="iconLink" ng-href="https://medium.com/@AirManFlow">
+                                            <img class="icons" src="images/medium.png" alt="medium">
+                                </a>
+
+                                
+                                <a class="iconLink" ng-href="https://twitter.com/AirManFlow">
+                                            <img class="icons" src="images/twitter.png"alt="twitter"> 
+                                </a>
+
+                            </div>
                         </div>
+
+                </div>
             </div>     
       
 
