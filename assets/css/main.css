@@ -185,7 +185,10 @@ a {
 }
 
 .contactIcons{
-  margin-left: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5em 10em;
 }
 
 .icons{
@@ -194,7 +197,6 @@ a {
   width: 2em;
   z-index: 1000; 
   position:relative;
-  margin: 3%;
 }
 
 
