@@ -33,7 +33,7 @@ ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '
 	};
 
 	//Array of diffrent quotes to render with every page load
-	$scope.quotes = ['"Knowledge speaks, but wisdom listens." Jimmy Hendrix']
+	$scope.quotes = ['"Knowledge speaks, but wisdom listens."']
 
 	//Select random quote from quotes array to render on the page
 	$scope.randomQuote = $scope.quotes[Math.floor(Math.random() * $scope.quotes.length)];

@@ -14,12 +14,13 @@ h2{
 }
 
 #var{
-  margin-right: 5px;
+  margin-right: 20px;
   color: #7AF5C3;
+
 }
 
 #equals{
-  color:#E81026;
+  color:#FF4053;
   margin-right: 5px;
   margin-left: 10px;
 }
@@ -44,12 +45,19 @@ h2{
 }
 
 #quote{
-  font-family: "gruppo";
+  font-family: 'Didot';
   font-size: 1.5em;
-  font-weight: bold;
-  padding-bottom: 1em; 
   padding-top: .5em;
-  width: 30%;
+  width: 20.5%;
+  order: 2;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#quoteAuthor{
+  font-family: 'Didot';
+  font-size: 1.5em;
+  width: 20.5%;
   order: 2;
   margin-left: auto;
   margin-right: auto;
@@ -131,6 +139,21 @@ a {
   top:0;
 }
 
+#bioText{
+  font-family: 'Georgia';
+  font-size: 1.5em;
+  font-weight: 400;
+  width: 49%;
+  text-align: center;
+  background: rgba(0,0,0, 0.05);
+  border-radius: 50%;
+  padding: 2.85em;
+  z-index: 1000;
+  order: 3;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+}
 
 #bioBackground{
   vertical-align: middle;
@@ -145,23 +168,6 @@ a {
   z-index: -1;
 }
 
-.bioText{
-  font-family: 'Proxima Nova', serif;
-  font-size: 1.5em;
-  font-weight: 400;
-  width: 49%;
-  text-align: center;
-  margin-top: 1%;
-  background: rgba(0,0,0, 0.05);
-  border-radius: 50%;
-  padding: 2.85em;
-  z-index: 1000;
-  order: 3;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3%;
-}
-
 #bioPic{
   height: 20em;
   width: 20em;
@@ -171,7 +177,7 @@ a {
   order: 1;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3%;
+  margin-top: 2%;
 }
 
 .contact{
@@ -238,9 +244,6 @@ a {
   text-decoration: none;
 }
 
-
-
-
 .pipe{
   color: white;
   font-size: 20px;
@@ -305,7 +308,7 @@ a {
 }
 
 .portfolioDescription{
-  font-family: 'Source Serif Pro', serif;
+  font-family: 'Georgia';
   font-weight: 400;
   font-size: 1.1em;
   width: 100%;
@@ -314,7 +317,7 @@ a {
 }
 
 .reponsibilitiesHeader{
-  font-family: 'Source Serif Pro', serif;
+    font-family: 'Georgia';
   font-weight: 400;
   font-size: 1em;
   width: 100%;
@@ -323,7 +326,7 @@ a {
 }
 
 .responsebilties{
-  font-family: 'Source Serif Pro', serif;
+    font-family: 'Georgia';
   font-weight: 400;
   font-size: 1.1em;
   width: 100%;
@@ -332,7 +335,7 @@ a {
 }
 
 .techBox{
-  font-family: 'Source Serif Pro', serif;
+  font-family: 'Georgia';
   font-size: 1em;
   font-weight: 400;
   width: 100%;
@@ -347,7 +350,7 @@ a {
   float: left;
   display: inline;
   width: 40%;
-  height: 53em;
+  height: 60em;
   margin-top: 2%;
   border: solid #000000 2px;
   border-radius: 5px;
