@@ -230,7 +230,16 @@ a {
 
 .contactItem{
   display:inline;
+  color:white;
+  text-decoration: none;
 }
+
+.contactItem:hover{
+  text-decoration: none;
+}
+
+
+
 
 .pipe{
   color: white;
