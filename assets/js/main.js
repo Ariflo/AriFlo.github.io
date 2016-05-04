@@ -1,6 +1,6 @@
 // add scripts
 
-$('head').append('<style>#typed-output {color: #E1D463} #fuckerSemicolon {color:#FF4053;}</style>');
+$('head').append('<style>#typed-output {color: #E1D463} #fuckerSemicolon {color:#ffffff;}</style>');
 
 $(document).on('ready', function() {
 	var semiHere = false;
