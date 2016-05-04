@@ -2,7 +2,7 @@
 
 $('head').append('<style>#typed-output {color: #E1D463} #fuckerSemicolon {color:#ffffff;}</style>');
 
-window.onload(function() {
+window.onload = function() {
 	var semiHere = false;
 	   var valr = setInterval(function(){
 	       var currTxt = $('#typed-output').html();
@@ -15,4 +15,4 @@ window.onload(function() {
 	           }
 	       }
 	   }, 20);
-});
+};
