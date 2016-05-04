@@ -1,6 +1,6 @@
 body, html {
    width: 100%;
-   height: 100%;
+   height: 225em;
    background-color: #f5f5f5;
 }
 
@@ -32,7 +32,7 @@ h2{
 .jumbotron{
     background: #000000;
     background-repeat: no-repeat;
-    height: 100em;
+    height: 110%;
     color: white;
     margin:0;
 }
@@ -121,7 +121,7 @@ a {
   opacity: 0;
 }
 
-#learnMoreButton:hover, #learnMoreButton:focus, #learnMoreButton:active, #learnMoreButton.active, #portfolioButton:hover, #portfolioButton:focus,#portfolioButton:active, #portfolioButton.active {
+#learnMoreButton:hover, #learnMoreButton:focus, #learnMoreButton:active, #learnMoreButton.active,#portfolioButton:active, #portfolioButton.active {
     background: -moz-linear-gradient(left top,  rgba(224, 224, 209, .2), rgba(235, 235, 224, .8)); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, bottom right, color-stop(rgba(224, 224, 209, .2)), color-stop(rgba(235, 235, 224, .8))); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(left top,  rgba(224, 224, 209, .2), rgba(235, 235, 224, .8)); /* Chrome10+,Safari5.1+ */
@@ -134,7 +134,7 @@ a {
 #bio{
   display: flex;
   flex-direction: column;
-  height: 100em;
+  height: 58%;
   position: relative;
   top:0;
 }
@@ -158,7 +158,7 @@ a {
 #bioBackground{
   vertical-align: middle;
   width: 100%;
-  height: 100em;
+  height: 100%;
   position: absolute;
   left: 0;
   top: 0;
@@ -184,7 +184,7 @@ a {
   clear:both;
   bottom: 0;
   color: #ffffff;
-  height: auto;
+  height: 20em;
   width: 100%;
   background-color: rgb(0,0,0);
   padding-bottom: 1%;
@@ -348,9 +348,8 @@ a {
 
 .project{
   float: left;
-  display: inline;
   width: 40%;
-  height: 53em;
+  height: auto;
   margin-top: 2%;
   border: solid #000000 2px;
   border-radius: 5px;
