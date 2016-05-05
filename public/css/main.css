@@ -206,6 +206,17 @@ a {
   margin: auto;
 }
 
+.contactInfo2{
+  position: fixed;
+  bottom:0;
+  right: 1em;
+  border: solid #ffffff 2px;
+  width: 40%;
+  color: white;
+  background-color: rgba(0,0,0, .6);
+  border-radius: 5px;
+}
+
 .contactIcons{
   display: flex;
   justify-content: space-around;
