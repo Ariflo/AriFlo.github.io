@@ -1,7 +1,4 @@
 // add scripts
-
-$('head').append('<style>#typed-output {color: #E1D463} #fuckerSemicolon {color:#ffffff;}</style>');
-
 window.onload = function() {
 	var semiHere = false;
 	   var valr = setInterval(function(){
@@ -14,7 +11,7 @@ window.onload = function() {
 		               var newHTML = $('#typed-output').html().replace(/;/, '<span id="fuckerSemicolon">;</span>');
 		               $('#typed-output').html(newHTML);
 		           }
-		       }
+		}
 	       }
 	}, 20);
 };

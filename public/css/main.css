@@ -9,6 +9,14 @@ h2{
   font: 3em "Monaco";
 }
 
+#typed-output {
+  color: #E1D463
+} 
+
+#fuckerSemicolon {
+  color:#ffffff;
+}
+
 #maintence{
     padding-top: 15%;
 }
@@ -234,9 +242,6 @@ a {
   margin-bottom: 1%;
   margin-top: 0;
 }
-
-
-
 
 .contactItem{
   display:inline;
