@@ -180,6 +180,7 @@ a {
   margin-top: 2%;
 }
 
+
 .contact{
   clear:both;
   bottom: 0;
@@ -188,6 +189,13 @@ a {
   width: 100%;
   background-color: rgb(0,0,0);
   padding-bottom: 1%;
+}
+
+
+.contactInfo{
+  border: solid #ffffff 2px;
+  width: 50%;
+  margin: auto;
 }
 
 .contactIcons{
@@ -228,11 +236,7 @@ a {
 }
 
 
-.contactInfo{
-  border: solid #ffffff 2px;
-  width: 50%;
-  margin: auto;
-}
+
 
 .contactItem{
   display:inline;
