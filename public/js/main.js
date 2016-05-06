@@ -1,5 +1,6 @@
 // add scripts
 window.onload = function() {
+	//make semi-colon on launch of page white
 	var semiHere = false;
 	   var valr = setInterval(function(){
 	       var currTxt = $('#typed-output').html();

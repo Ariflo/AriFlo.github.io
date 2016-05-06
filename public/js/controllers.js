@@ -1,8 +1,12 @@
-ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '$routeParams', '$timeout', '$anchorScroll', 'anchorSmoothScroll',
-	                                     function($scope,  $http,  $parse,  $location,   $routeParams, $timeout, $anchorScroll, anchorSmoothScroll) {
+ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '$routeParams', '$timeout', '$anchorScroll', '$window', 'anchorSmoothScroll',
+	                                     function($scope,  $http,  $parse,  $location,   $routeParams, $timeout, $anchorScroll,$window, anchorSmoothScroll) {
 
+	
 	//empty object to show client
 	$scope.client = {};
+
+	//user has not reached bio page on arrival 
+	$scope.atBio = false;
 
 	//add client info to database
 	$scope.info = function(){
@@ -30,6 +34,7 @@ ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '
 	//scroll to bio section when clicked
 	$scope.goToBio = function(eID) {
 	  anchorSmoothScroll.scrollTo(eID)
+	  $scope.atBio = true;
 	};
 
 	//Array of diffrent quotes to render with every page load
@@ -42,5 +47,19 @@ ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '
 	$scope.showBio = function(){
 		$scope.display = !$scope.display; 
 	}
-		
+
+	//when scroll reach the bottom of the page remove contact card
+	//Found on http://blog.sodhanalibrary.com/2015/02/detect-when-user-scrolls-to-bottom-of.html#.VyvoxxUrIcg
+	angular.element($window).bind("scroll", function() {
+
+	    var windowHeight = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
+	    var body = document.body, html = document.documentElement;
+
+	    var docHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight,  html.scrollHeight, html.offsetHeight);
+	    windowBottom = windowHeight + window.pageYOffset;
+
+	    if (windowBottom >= docHeight) {
+	        $scope.atBio = false;
+	    }
+	});
 }]);
