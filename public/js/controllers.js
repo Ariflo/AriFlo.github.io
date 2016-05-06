@@ -59,7 +59,7 @@ ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '
 	    windowBottom = windowHeight + window.pageYOffset;
 
 	    if (windowBottom >= docHeight) {
-	        $scope.atBio = false;
+	        angular.element('.contactInfo2').slideToggle();
 	    }
-	});
+	});	    	
 }]);
