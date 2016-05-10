@@ -5,7 +5,15 @@ body, html {
 }
 
 h2{
-  font: 3em "Monaco";
+  font: 2.5em "Monaco";
+}
+
+#profileHeader{
+  font: 2.5em 'Georgia';
+  width: 50%;
+  padding: 0  1.75em;
+  position: absolute;
+  margin-top: 2%;
 }
 
 #typed-output {
@@ -39,9 +47,10 @@ h2{
 .jumbotron{
     background: #000000;
     background-repeat: no-repeat;
-    height: 8%;
+    height: 5%;
     color: white;
     margin:0;
+    padding-top: 0;
 }
 
 .pageHeader{
@@ -54,45 +63,45 @@ h2{
 #bio{
   display: flex;
   flex-direction: row;
-  height: 15%;
+  justify-content: center;
+  height: auto;
   position: relative;
   top:0;
 }
 
 #bioBackground{
-  vertical-align: middle;
   width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0.1;
-  padding-right: 14%;
-  align-self: center;
-  z-index: -1;
+  height: 50%;
+  opacity: .1;
+  padding-right: 20em;
 }
 
 #bioText{
   font-family: 'Georgia';
   font-size: 1.5em;
   font-weight: 400;
-  width: 49%;
-  text-align: center;
-  background: rgba(0,0,0, 0.05);
-  border-radius: 50%;
+  width: 50%;
+  margin-top: 2%;
+  text-align: left;
   padding: 2.85em;
   z-index: 1000;
   order: 3;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3%;
+  height: 10%;
+  border-bottom: 2px solid rgba(77, 92, 99, .2);
+  box-shadow: 0 5px 5px rgba(191, 208, 217, .6);
 }
 
 .headshot{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 2%
+  margin-left: 2%;
+  margin-top: 2%;
+  border-right: 2px solid rgba(77, 92, 99, .2);
+  border-bottom: 2px solid rgba(77, 92, 99, .2);
+  padding: 0 1.25em;
+  height: 10%;
+  box-shadow: 10px 5px 5px rgba(191, 208, 217, .6);
 }
 
 #bioPic{
@@ -112,7 +121,7 @@ h2{
 #quoteAuthor{
   font-family: 'Didot';
   font-size: 1.5em;
-  width: 20.5%;
+  width: 100%;
   order: 2;
   margin-bottom: 3%;
 }
@@ -144,37 +153,24 @@ a {
     100% { opacity:1; }
 }
 
-#learnMoreButton {
+#portfolioButton {
   transition: 5s linear all;  
   opacity: 1;
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: 400;
   text-align: center;
   border: solid white;
   background: transparent;
   border-radius: 5px;
-  margin-top: 2%;
-}
-
-#portfolioButton {
-  font-size: 1.5em;
-  font-weight: 400;
-  text-align: center;
-  border: solid white;
-  border-radius: 5px;
-  margin-top: 3%;
-  z-index: 1000;
-  order:4;
- margin-top: 3%;
- align-self: center;
+  margin-top: 1%;
 
 }
 
-#learnMoreButton.ng-hide {
+#portfolioButton.ng-hide {
   opacity: 0;
 }
 
-#learnMoreButton:hover, #learnMoreButton:focus, #learnMoreButton:active, #learnMoreButton.active,#portfolioButton:active, #portfolioButton.active {
+#portfolioButton:hover, #portfolioButton:focus, #portfolioButton:active, #portfolioButton.active {
     background: -moz-linear-gradient(left top,  rgba(224, 224, 209, .2), rgba(235, 235, 224, .8)); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, bottom right, color-stop(rgba(224, 224, 209, .2)), color-stop(rgba(235, 235, 224, .8))); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(left top,  rgba(224, 224, 209, .2), rgba(235, 235, 224, .8)); /* Chrome10+,Safari5.1+ */
