@@ -5,7 +5,6 @@ body, html {
 }
 
 h2{
-  margin-top: 10%;
   font: 3em "Monaco";
 }
 
@@ -40,7 +39,7 @@ h2{
 .jumbotron{
     background: #000000;
     background-repeat: no-repeat;
-    height: 110%;
+    height: 10%;
     color: white;
     margin:0;
 }
@@ -142,7 +141,7 @@ a {
 #bio{
   display: flex;
   flex-direction: column;
-  height: 58%;
+  height: 10%;
   position: relative;
   top:0;
 }
@@ -177,8 +176,8 @@ a {
 }
 
 #bioPic{
-  height: 20em;
-  width: 22em;
+  height: 10em;
+  width: 12em;
   border-radius: 50%;
   align-self: center;
   z-index: 1000;
