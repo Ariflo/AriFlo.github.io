@@ -50,3 +50,15 @@ ariApp.service('anchorSmoothScroll', function(){
     };
     
 });
+
+ariApp.service('authInterceptor', function($window,$location,$q){
+    return {
+        request: function(config){
+            var jsonToken = localStorage.getItem('jwt');
+
+            if (jsonToken) config.headers.Authorization = 'Bearer ' + jsonToken;
+            
+            return config;
+        }
+    }
+})

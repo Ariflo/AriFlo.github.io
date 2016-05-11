@@ -1,5 +1,7 @@
 var clients = require('./clientRoute');
+var admin = require('./adminRoute');
 
 module.exports = {
-	clients:clients
+	clients:clients,
+	admin: admin
 };

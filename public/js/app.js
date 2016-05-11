@@ -1,6 +1,6 @@
 var ariApp = angular.module('ariApp', ['ngRoute', 'ngAnimate', 'ngResource', 'ngSanitize']);
 
-ariApp.config(function($routeProvider, $locationProvider,$httpProvider){
+ariApp.config(function($routeProvider, $locationProvider, $httpProvider){
 	$routeProvider
 	//landing page 
 	.when('/',{
@@ -24,4 +24,6 @@ ariApp.config(function($routeProvider, $locationProvider,$httpProvider){
   		enabled: true,
   		requireBase: false
 	});
+
+	$httpProvider.interceptors.push('authInterceptor');
 });

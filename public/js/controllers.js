@@ -71,8 +71,28 @@ ariApp.controller('projectController', ['$scope', '$http', '$parse', '$location'
 
 ariApp.controller('adminController', ['$scope', '$http', '$parse', '$location', '$routeParams', '$timeout', '$anchorScroll', '$window', 'anchorSmoothScroll',
 	                                     function($scope,  $http,  $parse,  $location,   $routeParams, $timeout, $anchorScroll,$window, anchorSmoothScroll) {
+	                                     	//admin obj for login; 
+	                                     	$scope.admin = {};
 
+	                                     	//hide admin form upon page launch
+	                                     	$scope.isAdmin = false;
+
+	                                     	//close of admin modal returns user to hompage
 	                                     	$scope.return = function(){
-	                                     		$location.url('/');
+	                                     		$location.path('/');
+	                                     	}
+
+	                                     	//tmp sign-up for admin
+	                                     	$scope.adminLogin = function(){
+	                                     		$http({
+	                                     			method: "POST",
+	                                     			url: "/api/admin",
+	                                     			data: $scope.admin
+	                                     		}).then(function(data) {
+							localStorage.setItem('jwt', data.data.jwt);
+	         						$scope.isAdmin = true;
+	                                     		}).catch(function(err){
+	                                     			console.log(err.message);
+	                                     		});
 	                                     	}
 }]);
