@@ -91,6 +91,9 @@ ariApp.controller('adminController', ['$scope', '$http', '$parse', '$location', 
 	                                     	//admin obj for login; 
 	                                     	$scope.admin = {};
 
+	                                     	//temp array of tech
+	                                     	$scope.technologies = ['HTML5', 'CSS', 'Javascript'];
+
 	                                     	//hide admin form upon page launch
 	                                     	$scope.isAdmin = false;
 	                                     	$scope.showModal = true; 

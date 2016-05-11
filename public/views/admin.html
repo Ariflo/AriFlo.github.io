@@ -18,38 +18,41 @@
 <form id="ProjectForm" class="col-xs-4" ng-submit="projectSubmit()" ng-if="isAdmin">
       <fieldset>
             <label>Project Image Url</label>
-            <input id="firstName" class="form-control" type="text" ng-model="client.firstName" name="firstName" placeholder="First Name" required>            
+            <input id="projectImage" class="form-control" type="text" ng-model="project.image" name="projectImage" placeholder="images/picture.png" required>            
       </fieldset>      
 
       <fieldset>
             <label>Project Title</label>
-            <input id="firstName" class="form-control" type="text" ng-model="client.firstName" name="firstName" placeholder="First Name" required>            
+            <input id="projectTitle" class="form-control" type="text" ng-model="project.title" name="projectTitle" placeholder="Ari's New Site" required>            
       </fieldset>    
 
       <fieldset>
             <label>Project Description</label>
-            <input id="firstName" class="form-control" type="text" ng-model="client.firstName" name="firstName" placeholder="First Name" required>            
+            <textarea id="projectDescription" class="form-control" type="text" ng-model="project.description" name="projectDescription" placeholder="This is what this site does!" required></textarea>         
       </fieldset>      
 
       <fieldset>
             <label>Responsibilities</label>
-            <input id="firstName" class="form-control" type="text" ng-model="client.firstName" name="firstName" placeholder="First Name" required>            
+            <input id="projectDuties" class="form-control" type="text" ng-model="project.duties" name="projectDuties" placeholder="I built this for this site...." required>            
       </fieldset>      
 
       <fieldset>
             <label>Tech Used</label>
-            <input id="firstName" class="form-control" type="text" ng-model="client.firstName" name="firstName" placeholder="First Name" required>            
+            <label ng-repeat="tech in technologies" class="checkbox-inline">
+              <input  type="checkbox" id="techCheckbox" value="tech"> {{tech}}
+            </label>
       </fieldset>      
 
       <fieldset>
             <label>Build Time</label>
-            <input id="firstName" class="form-control" type="text" ng-model="client.firstName" name="firstName" placeholder="First Name" required>            
+            <input id="projectBuild" class="form-control" type="text" ng-model="project.buildTime" name="projectBuild" placeholder="1 week(s)" required>            
       </fieldset>      
 
       <fieldset>
             <label>Team Members</label>
-            <input id="firstName" class="form-control" type="text" ng-model="client.firstName" name="firstName" placeholder="First Name" required>            
+            <input id="projectTeam" class="form-control" type="text" ng-model="project.team" name="projectTeam" placeholder="Sam, Sally, and John" required>            
       </fieldset>
+
             <input  id="infoFormSubmit" class="btn btn-primary" type="submit" value="Submit">
 </form> 
 <a ng-if="isAdmin" ng-click="adminLogout()" >Sign-Out</a>
