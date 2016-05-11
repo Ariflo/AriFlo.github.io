@@ -1,4 +1,4 @@
-<modal title="Welcome Ari" subtitle="Please sign-in">
+<modal title="Welcome Ari" subtitle="Please sign-in" ng-if="showModal">
           <form role="form" ng-submit="adminLogin()">
                 <div class="form-group">
                       <label for="username">Admin Login</label>
@@ -9,9 +9,18 @@
                       <input id="password" class="form-control" type="password" ng-model="admin.password" name="password" placeholder="Password" autocomplete="off" required>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default"  data-dismiss="modal" ng-click="return()">Close</button>
+                    <button id="adminCloseBtn"  type="button" class="btn btn-default"  aria-hidden="false" data-dismiss="modal" ng-click="return()">Close</button>
                     <input  id="adminSubmitBtn" class="btn btn-primary" type="submit" value="Submit">
                 </div>
           </form>
 </modal>
+
+<form id="ProjectForm" ng-submit="projectSubmit()" ng-if="isAdmin">
+      <legend>
+            <label>Project Image Url</label>
+            <input id="firstName" class="form-control" type="text" ng-model="client.firstName" name="firstName" placeholder="First Name" required>            
+           
+            <input  id="infoFormSubmit" class="btn btn-primary" type="submit" value="Submit">
+      </legend>
+</form> 
 

@@ -76,6 +76,7 @@ ariApp.controller('adminController', ['$scope', '$http', '$parse', '$location', 
 
 	                                     	//hide admin form upon page launch
 	                                     	$scope.isAdmin = false;
+	                                     	$scope.showModal = true; 
 
 	                                     	//close of admin modal returns user to hompage
 	                                     	$scope.return = function(){
@@ -91,6 +92,7 @@ ariApp.controller('adminController', ['$scope', '$http', '$parse', '$location', 
 	                                     		}).then(function(data) {
 							localStorage.setItem('jwt', data.data.jwt);
 	         						$scope.isAdmin = true;
+	         						$scope.showModal = false; 
 	                                     		}).catch(function(err){
 	                                     			console.log(err.message);
 	                                     		});
