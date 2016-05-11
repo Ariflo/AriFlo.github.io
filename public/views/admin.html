@@ -38,7 +38,7 @@
 
       <fieldset>
             <label>Tech Used</label>
-            <label ng-repeat="tech in technologies" class="checkbox-inline">
+            <label ng-repeat="tech in technologies" ng-model="project.tech" class="checkbox-inline">
               <input  type="checkbox" id="techCheckbox" value="tech"> {{tech}}
             </label>
       </fieldset>      
