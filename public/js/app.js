@@ -7,6 +7,16 @@ ariApp.config(function($routeProvider, $locationProvider,$httpProvider){
         		controller: 'homeController'
 	})	
 
+	.when('/project',{
+		templateUrl: 'views/project.html',
+        		controller: 'projectController'
+	})	
+
+	.when('/admin',{
+		templateUrl: 'views/admin.html',
+        		controller: 'adminController'
+	})	
+
 	$locationProvider.html5Mode( {
   		enabled: true,
   		requireBase: false
