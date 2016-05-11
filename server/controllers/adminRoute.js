@@ -13,7 +13,7 @@ router.post('/', function(req,res) {
 			bcrypt.compare(pass, admin.admin_pw, function(err, result){
 				if(result){
 					var jsonToken = jwt.sign({ id: admin.id }, "victoria");
-					res.json({jwt:jsonToken});
+					res.json({jwt:jsonToken, id: admin.id});
 				}else{
 					res.json({
 			            		error: JSON.stringify(err),
@@ -56,4 +56,12 @@ router.post('/', function(req,res) {
  //    	});
 });
 
+
+router.get('/:id', function(req, res, next) {
+		if (req.headers.authorization) {
+			var jsonToken = req.headers.authorization.split(' ')[1];
+			var decoded = jwt.verify(jsonToken, "victoria");
+			res.json({decoded});
+		}
+});
 module.exports = router;

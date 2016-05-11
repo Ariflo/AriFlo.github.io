@@ -71,6 +71,23 @@ ariApp.controller('projectController', ['$scope', '$http', '$parse', '$location'
 
 ariApp.controller('adminController', ['$scope', '$http', '$parse', '$location', '$routeParams', '$timeout', '$anchorScroll', '$window', 'anchorSmoothScroll',
 	                                     function($scope,  $http,  $parse,  $location,   $routeParams, $timeout, $anchorScroll,$window, anchorSmoothScroll) {
+
+	                                     	if(localStorage.getItem('jwt')){
+
+	                                     		var  token = localStorage.getItem('jwt');
+	                                     		$http({
+	                                     			method: "GET",
+	                                     			url: "/api/admin/" + token
+	                                     		}).then(function(data) {
+	                        				if(data.data.id === $scope.admin.id){
+	                        					 $scope.isAdmin = true;
+	                        					 $scope.showModal = false; 
+	                        				}
+	                                     		}).catch(function(err){
+	                                     			console.log("Please Sign in to gain access to admin page");
+	                                     		});
+	                                     	}
+
 	                                     	//admin obj for login; 
 	                                     	$scope.admin = {};
 
@@ -89,12 +106,20 @@ ariApp.controller('adminController', ['$scope', '$http', '$parse', '$location', 
 	                                     			method: "POST",
 	                                     			url: "/api/admin",
 	                                     			data: $scope.admin
-	                                     		}).then(function(data) {
+	                                     		}).then(function(data) {  			
 							localStorage.setItem('jwt', data.data.jwt);
+							$scope.admin.id = data.data.jwt;
 	         						$scope.isAdmin = true;
 	         						$scope.showModal = false; 
 	                                     		}).catch(function(err){
 	                                     			console.log(err.message);
 	                                     		});
+	                                     	}
+
+	                                     	$scope.adminLogout = function() {
+	                                     		localStorage.removeItem('jwt');
+	                                     		$scope.isAdmin = false;
+	                                     		$scope.admin = {};
+	                                     		$location.path('/');
 	                                     	}
 }]);

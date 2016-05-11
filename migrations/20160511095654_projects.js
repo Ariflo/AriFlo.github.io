@@ -4,6 +4,7 @@ exports.up = function(knex, Promise) {
 		table.string('project_title');
 		table.text('project_description');
 		table.string('build_time');
+		table.string('duties');
 	});
 };
 

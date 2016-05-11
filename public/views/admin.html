@@ -15,12 +15,42 @@
           </form>
 </modal>
 
-<form id="ProjectForm" ng-submit="projectSubmit()" ng-if="isAdmin">
-      <legend>
+<form id="ProjectForm" class="col-xs-4" ng-submit="projectSubmit()" ng-if="isAdmin">
+      <fieldset>
             <label>Project Image Url</label>
             <input id="firstName" class="form-control" type="text" ng-model="client.firstName" name="firstName" placeholder="First Name" required>            
-           
+      </fieldset>      
+
+      <fieldset>
+            <label>Project Title</label>
+            <input id="firstName" class="form-control" type="text" ng-model="client.firstName" name="firstName" placeholder="First Name" required>            
+      </fieldset>    
+
+      <fieldset>
+            <label>Project Description</label>
+            <input id="firstName" class="form-control" type="text" ng-model="client.firstName" name="firstName" placeholder="First Name" required>            
+      </fieldset>      
+
+      <fieldset>
+            <label>Responsibilities</label>
+            <input id="firstName" class="form-control" type="text" ng-model="client.firstName" name="firstName" placeholder="First Name" required>            
+      </fieldset>      
+
+      <fieldset>
+            <label>Tech Used</label>
+            <input id="firstName" class="form-control" type="text" ng-model="client.firstName" name="firstName" placeholder="First Name" required>            
+      </fieldset>      
+
+      <fieldset>
+            <label>Build Time</label>
+            <input id="firstName" class="form-control" type="text" ng-model="client.firstName" name="firstName" placeholder="First Name" required>            
+      </fieldset>      
+
+      <fieldset>
+            <label>Team Members</label>
+            <input id="firstName" class="form-control" type="text" ng-model="client.firstName" name="firstName" placeholder="First Name" required>            
+      </fieldset>
             <input  id="infoFormSubmit" class="btn btn-primary" type="submit" value="Submit">
-      </legend>
 </form> 
+<a ng-if="isAdmin" ng-click="adminLogout()" >Sign-Out</a>
 
