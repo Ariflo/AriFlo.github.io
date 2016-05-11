@@ -72,4 +72,7 @@ ariApp.controller('projectController', ['$scope', '$http', '$parse', '$location'
 ariApp.controller('adminController', ['$scope', '$http', '$parse', '$location', '$routeParams', '$timeout', '$anchorScroll', '$window', 'anchorSmoothScroll',
 	                                     function($scope,  $http,  $parse,  $location,   $routeParams, $timeout, $anchorScroll,$window, anchorSmoothScroll) {
 
+	                                     	$scope.return = function(){
+	                                     		$location.url('/');
+	                                     	}
 }]);
