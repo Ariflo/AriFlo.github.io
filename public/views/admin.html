@@ -15,7 +15,7 @@
           </form>
 </modal>
 
-<form id="ProjectForm" class="col-xs-4" ng-submit="projectSubmit()" ng-if="isAdmin">
+<form id="projectForm" class="col-xs-4" name="projectForm" ng-submit="projectSubmit(projectForm)" ng-if="isAdmin">
       <fieldset>
             <label>Project Image Url</label>
             <input id="projectImage" class="form-control" type="text" ng-model="project.image" name="projectImage" placeholder="images/picture.png" required>            

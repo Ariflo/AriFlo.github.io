@@ -91,6 +91,9 @@ ariApp.controller('adminController', ['$scope', '$http', '$parse', '$location', 
 	                                     	//admin obj for login; 
 	                                     	$scope.admin = {};
 
+	                                     	//project obj for project creation
+	                                     	$scope.project = {};
+
 	                                     	//temp array of tech
 	                                     	$scope.technologies = ['HTML5', 'CSS', 'Javascript'];
 
@@ -103,7 +106,7 @@ ariApp.controller('adminController', ['$scope', '$http', '$parse', '$location', 
 	                                     		$location.path('/');
 	                                     	}
 
-	                                     	//tmp sign-up for admin
+	                                     	//sign-in for admin
 	                                     	$scope.adminLogin = function(){
 	                                     		$http({
 	                                     			method: "POST",
@@ -119,10 +122,26 @@ ariApp.controller('adminController', ['$scope', '$http', '$parse', '$location', 
 	                                     		});
 	                                     	}
 
+	                                     	//Admin sign-out
 	                                     	$scope.adminLogout = function() {
 	                                     		localStorage.removeItem('jwt');
 	                                     		$scope.isAdmin = false;
 	                                     		$scope.admin = {};
 	                                     		$location.path('/');
+	                                     	}
+
+	                                     	$scope.projectSubmit = function(form){
+	                                     		if(form.$valid){
+	                                     			$http({
+	                                     				method:'POST',
+	                                     				url:'/api/projects',
+	                                     				data: $scope.project
+	                                     			}).then(function(data){
+	                                     				console.log(data);
+	                                     				
+	                                     			}).catch(function(err){
+	                                     				console.log(err.message);
+	                                     			});
+	                                     		}
 	                                     	}
 }]);

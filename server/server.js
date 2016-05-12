@@ -24,6 +24,7 @@ app.get('/', function(req,res){
 
 app.use('/api/clients', router.clients);
 app.use('/api/admin', router.admin);
+app.use('/api/projects', router.projects);
 
 //set a port to listen to
 var port = process.env.PORT || 3000;

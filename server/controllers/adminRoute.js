@@ -3,7 +3,7 @@ var router = express.Router();
 var locus = require("locus");
 var bcrypt = require('bcrypt');
 var  jwt = require('jsonwebtoken');
-var admin = require('../models/admin')
+var admin = require('../models/admin');
 
 router.post('/', function(req,res) {
 	 admin.onlyAdmin().where({admin_login: req.body.name}).first()
