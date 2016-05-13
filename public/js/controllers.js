@@ -140,7 +140,6 @@ ariApp.controller('adminController', ['$scope', '$http', '$parse', '$location', 
 	                                     	  };
 
 	                                     	$scope.projectSubmit = function(form){
-	                                     		console.log($scope.project);
 	                                     		if(form.$valid){
 	                                     			$http({
 	                                     				method:'POST',
