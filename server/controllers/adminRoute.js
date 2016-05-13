@@ -33,7 +33,7 @@ router.post('/', function(req,res) {
 	    })
 	});
 
-	//to use for admin sign-up
+	// to use for admin sign-up
 	// bcrypt.genSalt(10, function(err, salt){
 	//       bcrypt.hash(req.body.password, salt, function(err, hash){
 	// 	      admin.onlyAdmin().insert({

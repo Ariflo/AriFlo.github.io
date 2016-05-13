@@ -93,6 +93,8 @@ ariApp.controller('adminController', ['$scope', '$http', '$parse', '$location', 
 
 	                                     	//project obj for project creation
 	                                     	$scope.project = {};
+	                                     	$scope.project.tech = [];
+	                                     	$scope.project.team = {};
 
 	                                     	//temp array of tech
 	                                     	$scope.technologies = ['HTML5', 'CSS', 'Javascript'];
@@ -130,7 +132,15 @@ ariApp.controller('adminController', ['$scope', '$http', '$parse', '$location', 
 	                                     		$location.path('/');
 	                                     	}
 
+
+	                                     	$scope.setTech = function(value) {
+	                                     	    if($scope.project.tech.indexOf(value) === -1){
+	                                     	    	$scope.project.tech.push(value);
+	                                     	    }
+	                                     	  };
+
 	                                     	$scope.projectSubmit = function(form){
+	                                     		console.log($scope.project);
 	                                     		if(form.$valid){
 	                                     			$http({
 	                                     				method:'POST',
@@ -143,5 +153,22 @@ ariApp.controller('adminController', ['$scope', '$http', '$parse', '$location', 
 	                                     				console.log(err.message);
 	                                     			});
 	                                     		}
+	                                     	}
+
+	                                     	$scope.addMember = function(name, link){
+	                                     		angular.element('.projectTeam').append('<div class="projectTeam"><input class="form-control" type="text" ng-model="teamMember" name="teamMember" placeholder="Steve Jobs"><input class="form-control" type="text" ng-model="teamMemberLink" name="teamMemberLink" placeholder="www.linkedin.com/stevejobs"></div>');
+
+	                                     		var teamInput = angular.element('.projectTeam :input');
+	                                     	
+	                                     		for(var i=0; i<teamInput.length; i+=2){
+	                                     			//name
+	                                     			var name = teamInput[i].value;
+	                                     			var link = teamInput[i+1].value;
+
+	                                     			//push to team member array
+	                                     			if(!$scope.project.team[name] && name !== ''){
+	                                     			     $scope.project.team[name] = [name, link]	
+	                                     			}
+	                                     		}	                                     		
 	                                     	}
 }]);

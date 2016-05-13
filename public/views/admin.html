@@ -16,14 +16,29 @@
 </modal>
 
 <form id="projectForm" class="col-xs-4" name="projectForm" ng-submit="projectSubmit(projectForm)" ng-if="isAdmin">
+
+      <fieldset>
+            <label>Team Members</label>
+            <div class="projectTeam">
+                      <input id="name" class="form-control" type="text" ng-model="teamMember" name="teamMember" placeholder="Steve Jobs"> 
+                      <input id= "link" class="form-control" type="text" ng-model="teamMemberLink" name="teamMemberLink" placeholder="www.linkedin.com/stevejobs">   
+            </div>
+            <button id="addMember" class="btn btn-primary btn-sm" ng-click="addMember(teamMember, teamMemberLink)">Add Team Member</button>         
+      </fieldset>
+
+      <fieldset>
+            <label>Project Title</label>
+            <input id="projectTitle" class="form-control" type="text" ng-model="project.title" name="projectTitle" placeholder="Ari's New Site" required>            
+      </fieldset>        
+
       <fieldset>
             <label>Project Image Url</label>
             <input id="projectImage" class="form-control" type="text" ng-model="project.image" name="projectImage" placeholder="images/picture.png" required>            
       </fieldset>      
 
       <fieldset>
-            <label>Project Title</label>
-            <input id="projectTitle" class="form-control" type="text" ng-model="project.title" name="projectTitle" placeholder="Ari's New Site" required>            
+            <label>Project Demo</label>
+            <input id="projectVid" class="form-control" type="text" ng-model="project.vid" name="projectVid" placeholder="www.youtube.com/demo..." required>            
       </fieldset>    
 
       <fieldset>
@@ -38,8 +53,8 @@
 
       <fieldset>
             <label>Tech Used</label>
-            <label ng-repeat="tech in technologies" ng-model="project.tech" class="checkbox-inline">
-              <input  type="checkbox" id="techCheckbox" value="tech"> {{tech}}
+            <label ng-repeat="tech in technologies" class="checkbox-inline">
+              <input  type="checkbox" id="techCheckbox" ng-model="x" value='tech' ng-change="setTech(tech)" > {{tech}}
             </label>
       </fieldset>      
 
@@ -48,12 +63,7 @@
             <input id="projectBuild" class="form-control" type="text" ng-model="project.buildTime" name="projectBuild" placeholder="1 week(s)" required>            
       </fieldset>      
 
-      <fieldset>
-            <label>Team Members</label>
-            <input id="projectTeam" class="form-control" type="text" ng-model="project.team" name="projectTeam" placeholder="Sam, Sally, and John" required>            
-      </fieldset>
-
-            <input  id="infoFormSubmit" class="btn btn-primary" type="submit" value="Submit">
+            <input  id="infoFormSubmit" class="btn btn-success" type="submit" value="Submit">
 </form> 
 <a ng-if="isAdmin" ng-click="adminLogout()" >Sign-Out</a>
 
