@@ -31,7 +31,6 @@ ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '
 	        	method: "GET",
 	        	url: "/api/projects/" + projNum
 	        }).then(function(project) {  			
-	        	console.log(project.data);
 	        	$scope.projectTitle = project.data.project.project_title;
 	        	$scope.projectDescription = project.data.project.project_description;
 	        	$scope.projectDuties = project.data.project.duties;
