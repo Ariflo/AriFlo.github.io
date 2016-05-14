@@ -1,4 +1,4 @@
-<modal title="Welcome Ari" subtitle="Please sign-in" ng-if="showModal">
+<adminModal  title="Welcome Ari" subtitle="Please sign-in" ng-if="showModal">
           <form role="form" ng-submit="adminLogin()">
                 <div class="form-group">
                       <label for="username">Admin Login</label>
@@ -13,9 +13,9 @@
                     <input  id="adminSubmitBtn" class="btn btn-primary" type="submit" value="Submit">
                 </div>
           </form>
-</modal>
+</adminModal>
 
-<form id="projectForm" class="col-xs-4" name="projectForm" ng-submit="projectSubmit(projectForm)" ng-if="true">
+<form id="projectForm" class="col-xs-4" name="projectForm" ng-submit="projectSubmit(projectForm)" ng-if="isAdmin">
 
       <fieldset>
             <label>Team Members</label>
