@@ -358,12 +358,11 @@ a {
 #modalLogo{
   margin-top: 10%;
   border-radius: 5px;
-  margin-right: auto;
+  margin-right: 25%;
   margin-left: auto;
   margin-bottom: auto
   width: 100%;
   height: 50%;
-  padding-right: 50%;
   opacity: .6;
 }
 
