@@ -149,33 +149,6 @@ a {
     100% { opacity:1; }
 }
 
-#portfolioButton {
-  transition: 5s linear all;  
-  opacity: 1;
-  font-size: 1em;
-  font-weight: 400;
-  text-align: center;
-  border: solid white;
-  background: transparent;
-  border-radius: 5px;
-  margin-top: 1%;
-
-}
-
-#portfolioButton.ng-hide {
-  opacity: 0;
-}
-
-#portfolioButton:hover, #portfolioButton:focus, #portfolioButton:active, #portfolioButton.active {
-    background: -moz-linear-gradient(left top,  rgba(224, 224, 209, .2), rgba(235, 235, 224, .8)); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, bottom right, color-stop(rgba(224, 224, 209, .2)), color-stop(rgba(235, 235, 224, .8))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left top,  rgba(224, 224, 209, .2), rgba(235, 235, 224, .8)); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left top, rgba(224, 224, 209, .2), rgba(235, 235, 224, .8)); /* Opera 11.10+ */
-    background: -ms-linear-gradient(left top,  rgba(224, 224, 209, .2), rgba(235, 235, 224, .8)); /* IE10+ */
-    background: linear-gradient(to bottom right,  rgba(224, 224, 209, .2), rgba(235, 235, 224, .8)); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(224, 224, 209, .2)', endColorstr='rgba(235, 235, 224, .8)',GradientType=0 ); /* IE6-9 */
-}
-
 
 .contact{
   bottom: 0;
@@ -190,50 +163,6 @@ a {
   border: solid #ffffff 2px;
   width: 50%;
   margin: auto;
-}
-
-.contactInfo2{
-  position: fixed;
-  bottom: .5em;
-  right: 1em;
-  border: solid #ffffff 2px;
-  width: 35%;
-  color: white;
-  background-color: rgba(0,0,0, .6);
-  border-radius: 5px;
-}
-
-/*slide affect put together with the assistance of*/
-/*http://www.nganimate.org/angularjs/ng-switch/slider-css3-transition-animation*/
-.contactInfo2.ng-enter{
-    -webkit-transition: 2000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -moz-transition: 2000ms    cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -ms-transition: 2000ms   cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -o-transition: 2000ms    cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    transition: 2000ms  cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    left: 100%;
-}
-.contactInfo2.ng-enter.ng-enter-active{
-    left: 65%;
-}
-
-.contactInfo2.ng-leave{
-   right: 0;
-   animation: slideOutLeft 0.5s both ease-in
-}
-
-.contactInfo2.ng-leave.ng-leave-active{
-    left:-100%;
-}
-
-.icons2{
-  float: left;
-  height: 2em;
-  width: 2em;
-  margin-right: 1em;
-  margin-left: 1em;
-  z-index: 1000; 
-  position:relative;
 }
 
 .contactIcons{
@@ -410,6 +339,7 @@ a {
   flex-direction: column;
   align-items: center;
   width: 50%;
+  position: relative;
 }
 
 #projectFacts{
@@ -418,6 +348,7 @@ a {
   flex-direction: column;
   align-items: center;
   width: 50%;
+  position: relative;
 }
 
 .modal-title{
@@ -430,9 +361,9 @@ a {
   margin-right: auto;
   margin-left: auto;
   margin-bottom: auto
-  width: 100%;
+  width: 90%;
   height: 50%;
-  opacity: .1;
+  opacity: .6;
 }
 
 #projectsBox{
