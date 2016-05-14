@@ -295,21 +295,20 @@ a {
     width: 100%;
     height: auto;
     margin: 10px;
+    border-radius: 5px;
 }
 
 .projectPicHome{
     float: left;
     display: block;
     position: relative;
-    width: 35%;
+    width: 15em;
     height: auto;
-    margin: 2% 10%;
+    margin: 2% 7%;
+    border-radius: 5px;
 }
 
 #portfolio{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   width: 100%;
   height: 100%;
   position: relative;
@@ -391,7 +390,8 @@ a {
   align-content: center;
   align-items: center;
   width: 33%;
-  height: 8%;
+  height: 2em;
+  padding-top: 1em;
 }
 
 .modal-dialog{
@@ -418,3 +418,23 @@ a {
   width: 50%;
 }
 
+.modal-title{
+  text-align: center;
+}
+
+#modalLogo{
+  margin-top: 10%;
+  border-radius: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: auto
+  width: 100%;
+  height: 50%;
+  opacity: .1;
+}
+
+#projectsBox{
+  display: inline;
+  width: 100%;
+
+}

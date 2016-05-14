@@ -26,9 +26,35 @@
                          <img id="portfolioBackground" src="images/logo.jpg" alt="ariLogo">       
                           
                        <!--  PROJECT PICS -->
-                        <a ng-click="toggleProject(1)">
-                                <img class="projectPicHome" src="images/codequest.jpg" alt="codequest.io">
-                        </a>
+                       <div id="projectsBox">
+                            <a ng-click="toggleProject(1)">
+                                    <img class="projectPicHome" src="images/codequest.jpg" alt="codequest.io">
+                            </a>                        
+
+                            <a ng-click="toggleProject(1)">
+                                    <img class="projectPicHome" src="images/codequest.jpg" alt="codequest.io">
+                            </a>                        
+
+                            <a ng-click="toggleProject(1)">
+                                    <img class="projectPicHome" src="images/codequest.jpg" alt="codequest.io">
+                            </a>                        
+
+                            <a ng-click="toggleProject(1)">
+                                    <img class="projectPicHome" src="images/codequest.jpg" alt="codequest.io">
+                            </a>                        
+
+                            <a ng-click="toggleProject(1)">
+                                    <img class="projectPicHome" src="images/codequest.jpg" alt="codequest.io">
+                            </a>                        
+
+                            <a ng-click="toggleProject(1)">
+                                    <img class="projectPicHome" src="images/codequest.jpg" alt="codequest.io">
+                            </a>                        
+
+                            <a ng-click="toggleProject(1)">
+                                    <img class="projectPicHome" src="images/codequest.jpg" alt="codequest.io">
+                            </a>
+                        </div>
                          
                         <!-- PROJECT MODAL -->
                          <modal title="Full Stack (Group) - CodeQuest" visible="showProject">
@@ -38,6 +64,8 @@
                                      <p class="portfolioDescription">{{projectDescription}}</p>
 
                                      <p class="reponsibilitiesHeader"><b>My Responsibilities</b><span class="responsebilties"> {{projectDuties}}</span></p>
+
+                                     <img id="modalLogo" src="images/logo.jpg" alt="ariLogo"> 
                              </div>  
 
                              <div id="projectFacts">
@@ -54,10 +82,10 @@
                                                  </div>
                                          </div>
 
-                                         <div class="buildTime">
+                                         <span class="buildTime">
                                                  <p><b>Build Time</b></p>
                                                  <span> {{projectBuildTime}}</span>
-                                         </div>
+                                         </span>
 
                                          <div class="team">
                                                  <p><b>Team Member(s)</b></p>
@@ -160,28 +188,7 @@
                             <span class="details"><b>Build Time:</b> 2 weeks</span>
                             <span class="details"><b>Team Member(s):</b></span>
                             </p>
-                        </div>           
-
-                        <div class="project">
-                            <h4 class="portfolioHeader text-center">Full Stack (Group) - CodeQuest</h4>
-
-                            <a ng-href="https://www.youtube.com/watch?v=xDq8f0-gXLU">
-                                    <h4 class="demoHeader text-center">Video Demo</h4>
-                            </a>
-                            <a ng-href="/projects/1">
-                                    <img class="projectPic" src="images/codequest.jpg" alt="codequest.io">
-                            </a>
-
-                            <p class="portfolioDescription">Codequest is a searchable SPA database containing interview questions from tech companies and startups in the industry. Users can search for relevant interview questions pertaining to their position(s) of interest and can choose to contribute to this open source project by adding new interview questions. </p>
-
-                             <p class="reponsibilitiesHeader"><b>My Responsibilities</b><span class="responsebilties"> Scraping company data and setting up D3.js bar graph on landing page.</span></p>
-                            
-                            <p class="techBox">
-                            <span class="details"><b>Tech Used:</b>Postgres, Express, Angular, Node.js, Jquery, Bootstrap, Javascript, HTML5, CSS, D3.js, Nightmare.js (scraping), and Select 2 for search</span>
-                            <span class="details"><b>Build Time:</b> 1 week</span>
-                            <span class="details"><b>Team Member(s):</b><a href="https://www.linkedin.com/in/jonharlem"> Jonathan Harlem, </a></span><span><a href="https://www.linkedin.com/in/halahalshaikhly"> Halah Al-Shaikhly, </a></span><span><a href="https://www.linkedin.com/in/ashleyngu"> Ashley Nguyn, </a></span><span>and <a href="https://www.linkedin.com/in/jessyang650"> Jess Yang</a></span>
-                            </p>
-                        </div>         
+                        </div>               
 
                         <div class="project">
                             <h4 class="portfolioHeader text-center">OAuth with Angular (Paired) - RedditAngle</h4>
