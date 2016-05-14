@@ -8,6 +8,9 @@ ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '
 	//user has not reached bio page on arrival 
 	$scope.atBio = false;
 
+	//hide project
+	$scope.showProject = false;
+
 	//add client info to database
 	$scope.info = function(){
 		$http({
@@ -20,6 +23,39 @@ ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '
 			console.log(err);
 		});
 	}
+
+	$scope.toggleProject = function(projNum){
+	        $scope.showProject = !$scope.showProject;
+
+	        $http({
+	        	method: "GET",
+	        	url: "/api/projects/" + projNum
+	        }).then(function(project) {  			
+	        	console.log(project.data);
+	        	$scope.projectTitle = project.data.project.project_title;
+	        	$scope.projectDescription = project.data.project.project_description;
+	        	$scope.projectDuties = project.data.project.duties;
+	        	$scope.projectImg = project.data.project.project_img;
+	        	$scope.projectDemo = project.data.project.project_vid;
+
+	        	var techData = project.data.tech;
+	        	$scope.technologies = [];
+	        	for(var i = 0; i<techData.length; i++){
+	        		$scope.technologies.push(techData[i].tech);
+	        	}
+
+	        	$scope.projectBuildTime = project.data.project.build_time;
+
+	        	var teamData = project.data.team
+	        	$scope.team = [];
+	        	for(var i = 0; i<teamData.length; i++){
+	        		$scope.team.push(teamData[i]);
+	        	}
+
+	        }).catch(function(err){
+	        	console.log(err.message);
+	        });   
+	};
 
 	//render heading text 
 	$scope.texttyping = ['"Stargazer";', 
@@ -61,12 +97,7 @@ ariApp.controller('homeController', ['$scope', '$http', '$parse', '$location', '
 	    if (windowBottom >= docHeight) {
 	        angular.element('.contactInfo2').slideToggle();
 	    }
-	});	    	
-}]);
-
-ariApp.controller('projectController', ['$scope', '$http', '$parse', '$location', '$routeParams', '$timeout', '$anchorScroll', '$window', 'anchorSmoothScroll',
-	                                     function($scope,  $http,  $parse,  $location,   $routeParams, $timeout, $anchorScroll,$window, anchorSmoothScroll) {
-	                                         	
+	});	    	  
 }]);
 
 ariApp.controller('adminController', ['$scope', '$http', '$parse', '$location', '$routeParams', '$timeout', '$anchorScroll', '$window', 'anchorSmoothScroll',
@@ -97,7 +128,7 @@ ariApp.controller('adminController', ['$scope', '$http', '$parse', '$location', 
 	                                     	$scope.project.team = {};
 
 	                                     	//temp array of tech
-	                                     	$scope.technologies = ['HTML5', 'CSS', 'Javascript'];
+	                                     	$scope.technologies = ['HTML5', 'CSS', 'Javascript', 'PostgreSQL', 'Express', 'Angular', 'Node.js', 'jQuery', 'D3.js', 'Twitter Bootstrap', 'Nightmare.js', 'Select 2', 'ReGex'];
 
 	                                     	//hide admin form upon page launch
 	                                     	$scope.isAdmin = false;

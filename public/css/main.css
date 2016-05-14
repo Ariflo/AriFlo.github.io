@@ -1,6 +1,4 @@
 body, html {
-   width: 100%;
-   height: 225em;
    background-color: #f5f5f5;
 }
 
@@ -10,7 +8,7 @@ h2{
 
 #profileHeader{
   font: 2.5em 'Georgia';
-  width: 50%;
+  width: 40%;
   padding: 0  1.75em;
   position: absolute;
   margin-top: 2%;
@@ -47,7 +45,7 @@ h2{
 .jumbotron{
     background: #000000;
     background-repeat: no-repeat;
-    height: 5%;
+    height: 7em;
     color: white;
     margin:0;
     padding-top: 0;
@@ -64,16 +62,14 @@ h2{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: auto;
-  position: relative;
-  top:0;
 }
 
-#bioBackground{
+#portfolioBackground{
+  position: absolute;
   width: 100%;
-  height: 50%;
+  height: 100%;
   opacity: .1;
-  padding-right: 20em;
+  padding-right: 12%;
 }
 
 #bioText{
@@ -86,7 +82,7 @@ h2{
   padding: 2.85em;
   z-index: 1000;
   order: 3;
-  height: 10%;
+  height: 16.70em;
   border-bottom: 2px solid rgba(77, 92, 99, .2);
   box-shadow: 0 5px 5px rgba(191, 208, 217, .6);
 }
@@ -100,7 +96,7 @@ h2{
   border-right: 2px solid rgba(77, 92, 99, .2);
   border-bottom: 2px solid rgba(77, 92, 99, .2);
   padding: 0 1.25em;
-  height: 10%;
+  height: 25em;
   box-shadow: 10px 5px 5px rgba(191, 208, 217, .6);
 }
 
@@ -182,13 +178,11 @@ a {
 
 
 .contact{
-  clear:both;
   bottom: 0;
-  color: #ffffff;
-  height: 20em;
   width: 100%;
+  color: #ffffff;
+  height: 15em;
   background-color: rgb(0,0,0);
-  padding-bottom: 1%;
 }
 
 
@@ -295,26 +289,36 @@ a {
 }
 
 .projectPic{
-    display: inline;
-    width: 95%;
+    float: left;
+    position: relative;
+    display: block;
+    width: 100%;
     height: auto;
     margin: 10px;
+}
+
+.projectPicHome{
+    float: left;
+    display: block;
+    position: relative;
+    width: 35%;
+    height: auto;
+    margin: 2% 10%;
 }
 
 #portfolio{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
   width: 100%;
-  height: auto;
-  padding-bottom: 5em;
-  float: left;
+  height: 100%;
+  position: relative;
 }
 
 .portfolioHeader{
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600;
+  float: right;
 }
 
 .demoHeader{
@@ -324,7 +328,6 @@ a {
   border: solid #000000;
   border-radius: 5px;
   width: 30%;
-  margin: auto;
 }
 
 .portfolioDescription{
@@ -354,28 +357,64 @@ a {
   display: block;
 }
 
-.techBox{
+.specs{
+  display:flex;
+  flex-direction: row;
+  align-content: center;
   font-family: 'Georgia';
   font-size: 1em;
   font-weight: 400;
   width: 100%;
-  padding: 1em;
+  margin-left: 10%;
+  padding-bottom: 5%;
+}
+
+.techBox{
+  width: 20%;
 }
 
 .details{
-  display: block;
+  float:left;
+  display: flex;
+  flex-direction: column;
+  align-content: left;
 }
 
-.project{
+.team{
+  width: 33%
+}
+
+.buildTime{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 33%;
+  height: 8%;
+}
+
+.modal-dialog{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 75%;
+}
+
+#project{
+  float: right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+#projectFacts{
   float: left;
-  width: 40%;
-  height: auto;
-  margin-top: 2%;
-  border: solid #000000 2px;
-  border-radius: 5px;
-  margin: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
 }
 
-.projectTeam{
-  display: block;
-}

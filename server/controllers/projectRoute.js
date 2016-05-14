@@ -4,6 +4,7 @@ var locus = require("locus");
 var project = require('../models/projects');
 var  knex = require('../../db/knex');
 
+//Add project to database
 router.post('/', function(req,res) {
 
 	project.allProjects().insert({
@@ -36,12 +37,34 @@ router.post('/', function(req,res) {
 					return done;
 				})
 			}
-
 		}else{
 			return done;	
 		}
-	})
 
+	}).catch(function(err){
+	    res.json({
+	        error: JSON.stringify(err),
+	        message: "Error connecting to Database"
+	    })
+	});
 });
+
+//get project from database
+router.get('/:id', function(req, res){
+	project.allProjects().where({id: req.params.id}).first().then(function(project){
+
+		knex('tech').where({project_id: req.params.id}).then(function(tech){
+			knex('team').where({project_id: req.params.id}).then(function(team){
+				res.json({project:project, tech:tech, team:team});
+			})
+		})
+
+	}).catch(function(err){
+		    res.json({
+		        error: JSON.stringify(err),
+		        message: "Error connecting to Database"
+		    })
+	});
+})
 
 module.exports = router;

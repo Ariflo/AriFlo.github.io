@@ -1,10 +1,11 @@
+            <!--header space-->
             <div class="jumbotron">
                 <div class="pageHeader">
                          <h2><span id="var">const</span>arianFlores<span id="equals">=</span><typedjs id="tmp" strings="texttyping"></typedjs></h2>
-                         <button type="button" ng-show="show" ng-click="goToBio('webbAppHeader')" id="portfolioButton" class="btn btn-lg gradient">Portfolio</button> 
                 </div>
             </div>
-
+            
+             <!--Bio spot-->
             <div id="bio">
                         
                         <div class="headshot">
@@ -19,12 +20,106 @@
                                 A software developer working to discover what logic we can apply to this crazy world we call home. I'm a Vanderbilt alum (<i>Go 'Dores!</i>) from New York  living in SF; I spend 60% of my time building cool web apps, 25% sleeping, and the rest catching up with Game of Thrones. 
                         </p>                                       
             </div>
-            <div class="row">
-                  <img id="bioBackground" src="images/logo.jpg" alt="ariLogo">       
-            </div>     
-            <h2 id="webbAppHeader" class="text-center">Web App Portfolio</h2>
+            
+            <!-- PORTFOLIO  -->
             <div id="portfolio">
+                         <img id="portfolioBackground" src="images/logo.jpg" alt="ariLogo">       
+                          
+                       <!--  PROJECT PICS -->
+                        <a ng-click="toggleProject(1)">
+                                <img class="projectPicHome" src="images/codequest.jpg" alt="codequest.io">
+                        </a>
+                         
+                        <!-- PROJECT MODAL -->
+                         <modal title="Full Stack (Group) - CodeQuest" visible="showProject">
+                             <div id="project">
+                                     <h4 class="portfolioHeader text-center">{{projectTitle}}</h4>
 
+                                     <p class="portfolioDescription">{{projectDescription}}</p>
+
+                                     <p class="reponsibilitiesHeader"><b>My Responsibilities</b><span class="responsebilties"> {{projectDuties}}</span></p>
+                             </div>  
+
+                             <div id="projectFacts">
+                                     <a ng-href="{{projectDemo}}">
+                                             <img class="projectPic" ng-src="{{projectImg}}" alt="codequest.io">
+                                     </a>
+                                    
+                                    <div class="specs">
+
+                                         <div class="techBox">
+                                                 <p><b>Tech Used</b></p>
+                                                 <div class="details">
+                                                     <span class="techItems" ng-repeat="tech in technologies">{{tech}}</span>
+                                                 </div>
+                                         </div>
+
+                                         <div class="buildTime">
+                                                 <p><b>Build Time</b></p>
+                                                 <span> {{projectBuildTime}}</span>
+                                         </div>
+
+                                         <div class="team">
+                                                 <p><b>Team Member(s)</b></p>
+                                                 <span class="details" ng-repeat="member in team"><a href="{{member.link}}"> {{member.name}}</a></span>
+                                        </div>
+
+                                    </div>
+
+                             </div>
+                         </modal>
+            </div>   
+            
+            <!-- CONTACT FOOTER-->
+             <div class="contact">    
+                 <h2 id="reachOut" class="text-center"> Contact </h2>     
+
+                 <div class="contactInfo text-center">
+
+                     <h4 class="text-center">Arian Flores</h4>
+                     <h5 class="text-center">Software Engineer</h5>
+                     <span class="glyphicon glyphicon-envelope"></span><a href="mailto:ariflo@arianflores.com" class="contactItem">ariflo@arianflores.com</a>
+                     <span class="glyphicon glyphicon-earphone"></span><p class="contactItem">917-565-2838</p>
+                     <span class="glyphicon glyphicon-map-marker"></span><p class="contactItem">San Francisco, CA</p>
+
+                             
+                     <div class="contactIcons">
+
+                         <a class="iconLink" ng-href="https://github.com/ariflo">
+                                 <img class="icons" src="images/github.png" alt="github">
+                         </a>
+
+                         
+                         <a class="iconLink" ng-href="https://www.linkedin.com/in/arianflores">
+                                 <img class="icons" src="images/Linkedin.png" alt="linkedin">
+                         </a>
+
+                         
+                         <a class="iconLink" ng-href="https://stackoverflow.com/users/6026693/arian-flores?tab=profile">
+                                 <img class="icons" src="images/stackoverflow.png" alt="stackoverflow">
+                         </a>
+
+                         
+                         <a  class="iconLink" ng-href="https://www.facebook.com/arian.flores.77">
+                                     <img class="icons" src="images/facebook.png" alt="facebook">
+                         </a>
+
+                         
+                         <a class="iconLink" ng-href="https://medium.com/@AirManFlow">
+                                     <img class="icons" src="images/medium.png" alt="medium">
+                         </a>
+
+                         
+                         <a class="iconLink" ng-href="https://twitter.com/AirManFlow">
+                                     <img class="icons" src="images/twitter.png"alt="twitter"> 
+                         </a>
+
+                     </div>
+
+                 </div>
+  
+
+<!--            
                         <div class="project">
                             <h4 class="portfolioHeader text-center">Intro to CSS and Javascript - Pixel Art Maker</h4>
 
@@ -73,7 +168,7 @@
                             <a ng-href="https://www.youtube.com/watch?v=xDq8f0-gXLU">
                                     <h4 class="demoHeader text-center">Video Demo</h4>
                             </a>
-                            <a ng-href="http://codequest.io">
+                            <a ng-href="/projects/1">
                                     <img class="projectPic" src="images/codequest.jpg" alt="codequest.io">
                             </a>
 
@@ -171,9 +266,7 @@
                             <span class="details"><b>Build Time:</b> 1 week</span>
                             <span class="details"><b>Team Member(s):</b><a href="https://www.linkedin.com/in/simonsekhon"> Simon Sekhon </a></span>
                             </p>
-                        </div>              
-
-                     
+                        </div>       
 
                         <div class="project">
                             <h4 class="portfolioHeader text-center">Magisterspet.com</h4>
@@ -194,102 +287,8 @@
                             <span class="details"><b>Expected release date:</b> June 1st, 2016</span>
                             <span class="details"><b>Team Member(s):</b></span>
                             </p>
-                        </div>                                                
-             
-
-            </div>
-
-            <div class="contact">    
-                <h2 id="reachOut" class="text-center"> Contact </h2>     
-
-                <div class="contactInfo text-center">
-
-                    <h4 class="text-center">Arian Flores</h4>
-                    <h5 class="text-center">Software Engineer</h5>
-                    <span class="glyphicon glyphicon-envelope"></span><a href="mailto:ariflo@arianflores.com" class="contactItem">ariflo@arianflores.com</a>
-                    <span class="glyphicon glyphicon-earphone"></span><p class="contactItem">917-565-2838</p>
-                    <span class="glyphicon glyphicon-map-marker"></span><p class="contactItem">San Francisco, CA</p>
-
-                            
-                    <div class="contactIcons">
-
-                        <a class="iconLink" ng-href="https://github.com/ariflo">
-                                <img class="icons" src="images/github.png" alt="github">
-                        </a>
-
-                        
-                        <a class="iconLink" ng-href="https://www.linkedin.com/in/arianflores">
-                                <img class="icons" src="images/Linkedin.png" alt="linkedin">
-                        </a>
-
-                        
-                        <a class="iconLink" ng-href="https://stackoverflow.com/users/6026693/arian-flores?tab=profile">
-                                <img class="icons" src="images/stackoverflow.png" alt="stackoverflow">
-                        </a>
-
-                        
-                        <a  class="iconLink" ng-href="https://www.facebook.com/arian.flores.77">
-                                    <img class="icons" src="images/facebook.png" alt="facebook">
-                        </a>
-
-                        
-                        <a class="iconLink" ng-href="https://medium.com/@AirManFlow">
-                                    <img class="icons" src="images/medium.png" alt="medium">
-                        </a>
-
-                        
-                        <a class="iconLink" ng-href="https://twitter.com/AirManFlow">
-                                    <img class="icons" src="images/twitter.png"alt="twitter"> 
-                        </a>
-
-                    </div>
-
-                </div>
-            </div>     
-
-                <div ng-if="atBio" class="contactInfo2 text-center">
-
-                    <h4 class="text-center">Arian Flores</h4>
-                    <h5 class="text-center">Software Engineer</h5>
-                    <span class="glyphicon glyphicon-envelope"></span><a href="mailto:ariflo@arianflores.com" class="contactItem">ariflo@arianflores.com</a>
-                    <span class="glyphicon glyphicon-earphone"></span><p class="contactItem">917-565-2838</p>
-                    <span class="glyphicon glyphicon-map-marker"></span><p class="contactItem">San Francisco, CA</p>
-
-                            
-                    <div class="contactIcons">
-
-                        <a class="iconLink" ng-href="https://github.com/ariflo">
-                                <img class="icons2" src="images/github.png" alt="github">
-                        </a>
-
-                        
-                        <a class="iconLink" ng-href="https://www.linkedin.com/in/arianflores">
-                                <img class="icons2" src="images/Linkedin.png" alt="linkedin">
-                        </a>
-
-                        
-                        <a class="iconLink" ng-href="https://stackoverflow.com/users/6026693/arian-flores?tab=profile">
-                                <img class="icons2" src="images/stackoverflow.png" alt="stackoverflow">
-                        </a>
-
-                        
-                        <a  class="iconLink" ng-href="https://www.facebook.com/arian.flores.77">
-                                    <img class="icons2" src="images/facebook.png" alt="facebook">
-                        </a>
-
-                        
-                        <a class="iconLink" ng-href="https://medium.com/@AirManFlow">
-                                    <img class="icons2" src="images/medium.png" alt="medium">
-                        </a>
-
-                        
-                        <a class="iconLink" ng-href="https://twitter.com/AirManFlow">
-                                    <img class="icons2" src="images/twitter.png"alt="twitter"> 
-                        </a>
-
-                    </div>
-
-            </div>
+                        </div>     
+            -->
       
 
 <!-- 
