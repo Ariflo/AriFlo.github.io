@@ -19,7 +19,7 @@ ariApp.config(function($routeProvider, $locationProvider, $httpProvider){
 	      });
 
 	$locationProvider.html5Mode({
-  		enabled: false,
+  		enabled: true,
   		requireBase: false
 	});
 
