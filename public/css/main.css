@@ -305,8 +305,9 @@ a {
 
 .details{
   float:left;
-  display: block;
-
+  display: flex;
+  flex-direction: column;
+  align-content: left; 
 }
 
 .team{
