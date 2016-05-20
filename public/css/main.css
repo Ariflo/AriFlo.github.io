@@ -362,8 +362,8 @@ a {
 #modalLogo{
   border-radius: 5px;
   position: fixed;
-  width: 20%;
-  height: 25%;
+  width: 25%;
+  height: 50%;
   opacity: .6;
 }
 
